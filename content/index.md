@@ -1,10 +1,11 @@
 <div id="canvas-holder"></div>
 
-# Computational Form
+# Make Things that Make Things!
+### PSAM3060-D Computational Form
 
-### [Class Syllabus](syllabus.html) • [Class Calendar](calendar.html) • [Class Topics](topics.html)
 
-#### [P5 Sketch Lab](./p5_lab.html) • [Resources](./resources.html) • [Assignment Specfication](#specification.html) 
+#### [Class Blog](http://compform.tumblr.com) • [Syllabus](syllabus.html) • [Calendar](calendar.html) • [Topics](topics.html) • [P5 Sketch Lab](./p5_lab.html) • [Resources](./resources.html) 
+
 
 <br />
 
@@ -13,23 +14,28 @@
 <script type="text/javascript" src="javascript/p5.min.js"></script>
 <script type="text/javascript" src="sierpinski.js"></script>
 
-| Week | Topic
-| --- | ---
-| Week 1 | Intro to Programming | [class notes](#)
-| Week 2 | Intro to Javascript Syntax | [class notes](#)
-| Week 3 | Interactivity and Animation in p5 | [class notes](#)
-| Week 4 | Javascript Functions and Data | [class notes](#)
-| Week 5 | Working with Images in p5 | [class notes](#)
-| Week 6 | Intro to Interaction Design | [class notes](#)
-| Week 7 | Programming Interactions | [class notes](#)
-| Week 8 | Interaction and Narrative | [class notes](#)
-| Week 9 | Collaborative Programming | [class notes](#)
-| Week 10 | Programming for the Web | [class notes](#)
-| Week 11 | Advanced Topics | [class notes](#)
-| Week 12 | Creating Proposals | [class notes](#)
-| Week 13 | Creating Proofs of Concept | [class notes](#)
-| Week 14 | WIP Critique | [class notes](#)
-| Week 15 | Final Critique | [class notes](#)
+| Week | Topic | Tool
+| --- | --- | ---
+| | **Images** |
+| Week 1 | Tiled Graphics | Paper | [class notes](#)
+| Week 2 | Generating Randomized Images | Javascript + P5 | [class notes](#)
+| Week 3 | Generating Vector Data | Adobe Scripting | [class notes](#)
+| Week 4 | Manipulating Vector Data | Adobe Scripting | [class notes](#)
+| | **Video** |
+| Week 5 | Generating Animations | Javascript + P5 | [class notes](#)
+| Week 6 | Manipulating Live Video | Quartz Composer | [class notes](#)
+| | **Sound** |
+| Week 7 | Visualizing Sound | Quartz Composer | [class notes](#)
+| Week 8 | Generating Sound | TBD | [class notes](#)
+| | **Miscellanea** |
+| Week 9 | Generating Text | Javascript | [class notes](#)
+| Week 10 | Generating 3D Forms | OpenSCAD | [class notes](#)
+| Week 11 | TBD | TBD | [class notes](#)
+| | **Final** |
+| Week 12 | Final | | [class notes](#)
+| Week 13 | Final | | [class notes](#)
+| Week 14 | Final | | [class notes](#)
+| Week 15 | Final | | [class notes](#)
 
 
 
