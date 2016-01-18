@@ -4,7 +4,7 @@
 ### PSAM3060-D Computational Form
 
 
-#### [Class Blog](http://compform.tumblr.com) • [Syllabus](syllabus.html) • [Calendar](calendar.html) • [Topics](topics.html) • [P5 Sketch Lab](./p5_lab.html) • [Resources](./resources.html) 
+#### [Class Blog](http://compform.tumblr.com) • [Syllabus](syllabus.html) • [P5 Sketch Lab](./p5_lab.html) <!-- • [Resources](./resources.html)  -->
 
 
 <br />
@@ -17,7 +17,7 @@
 | Week | Topic | Tool
 | --- | --- | ---
 | | **Images** |
-| Week 1 | Tiled Graphics | Paper | [class notes](#)
+| Week 1 | Tiled Graphics | Paper | [class notes](week_1)
 | Week 2 | Generating Randomized Images | Javascript + P5 | [class notes](#)
 | Week 3 | Generating Vector Data | Adobe Scripting | [class notes](#)
 | Week 4 | Manipulating Vector Data | Adobe Scripting | [class notes](#)
@@ -31,14 +31,28 @@
 | Week 9 | Generating Text | Javascript | [class notes](#)
 | Week 10 | Generating 3D Forms | OpenSCAD | [class notes](#)
 | Week 11 | TBD | TBD | [class notes](#)
-| | **Final** |
-| Week 12 | Final | | [class notes](#)
-| Week 13 | Final | | [class notes](#)
-| Week 14 | Final | | [class notes](#)
-| Week 15 | Final | | [class notes](#)
-
-
+| | **Final Project** |
+| Week 12 | Final Project Work Time, Special Topic Lecture
+| Week 13 | Final Project Work Time, Special Topic Lecture
+| Week 14 | Final Project Work Time, Special Topic Lecture
+| Week 15 | Final Critique | 
 
 
 
 <a href="sierpinski.js" class="p5_example show-titled-lab-link hidden">sierpinski.js</a>
+
+
+that great video game graphics art video series on youtube
+
+
+http://previews.123rf.com/images/claranatoli/claranatoli0701/claranatoli070100082/709614-Traditional-ancient-ceramics-Valencia-Spain-Stock-Photo-spanish-tile.jpg
+
+
+http://www.spriters-resource.com/resources/sheets/19/20592.png
+
+
+http://www.jamisbuck.org/mazes/
+
+http://www.spelunkyworld.com/whatis.html
+
+Tiled

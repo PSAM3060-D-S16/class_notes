@@ -26,63 +26,65 @@ The following outlines the main topics to be presented in each class. This may b
 
 <style type="text/css"> td:first-child {width: 100px;}</style>
 
-| Unit 1 | Introduction to Programming in Javascript and p5 | Assignment
-| --- | --- | ---
-| Week 1 | Intro to Programming | Basic Drawing
-| Week 2 | Intro to Javascript Syntax | Variable Drawing
-| Week 3 | Interactivity and Animation in p5 | Coding Challenges
-| Week 4 | Javascript Functions and Data | Coding Challenges
-| Week 5 | Working with Images in p5 | Coding Challenges
 
-| Unit 2 | Creative Computing Projects | Assignment
+| Week | Topic | Tool
 | --- | --- | ---
-| Week 6 | Intro to Interaction Design | Interaction Story Boarding
-| Week 7 | Programming Interactions | Implementing Interaction
-| Week 8 | Interaction and Narrative | Children's Book Interactive
-| Week 9 | Collaborative Programming | Crowd Source Project
-| Week 10 | Programming for the Web | Networked Code
+| | **Images** |
+| Week 1 | Tiled Graphics | Paper 
+| Week 2 | Generating Randomized Images | Javascript + P5 
+| Week 3 | Generating Vector Data | Adobe Scripting 
+| Week 4 | Manipulating Vector Data | Adobe Scripting 
+| | **Video** |
+| Week 5 | Generating Animations | Javascript + P5 
+| Week 6 | Manipulating Live Video | Quartz Composer 
+| | **Sound** |
+| Week 7 | Visualizing Sound | Quartz Composer 
+| Week 8 | Generating Sound | TBD 
+| | **Miscellanea** |
+| Week 9 | Generating Text | Javascript 
+| Week 10 | Generating 3D Forms | OpenSCAD 
+| Week 11 | TBD | TBD 
+| | **Final Project** |
+| Week 12 | Final Project Work Time,  Special Topic Lecture
+| Week 13 | Final Project Work Time,  Special Topic Lecture
+| Week 14 | Final Project Work Time,  Special Topic Lecture
+| Week 15 | Final Critique | 
 
-| Unit 3 | Advanced Topics and Final | Assignment
-| --- | --- | ---
-| Week 11 | Advanced Topics | Final Concepting
-| Week 12 | Creating Proposals | Final Proposal
-| Week 13 | Creating Proofs of Concept | Final POC
-| Week 14 | WIP Critique | Final Review
-| Week 15 | Final Critique | Final Crit
+
+
 
 
 ## Learning Outcomes
-At the completion of this course, students should be able to:
+In this course students should:
 
-- Demonstrate knowledge of fundamental programming concepts
-- Develop visual & interactive projects using Javascript and p5.js
-- Develop work conforming to a technical spec
+- Develop knowledge of fundamental programming concepts
+- Develop visual & interactive projects using a variety of programming tools
 - Work with version control software
-- Concept and design interactive media projects
+- Practice design ideation techniques
 - Integrate a variety of media elements into their projects
 - Problem solve with other students
 - Build on these skills for future work in their own design practice
 
 
 ## Assessable Tasks
-Students will complete weekly assignments to demonstrate understanding of course material. These assignments will be evaluated based on technical mastery and conceptual and aesthetic exploration. In addition a multi-week final project will be assigned. This assignment will require deeper exploration, development, and application of course material.
+Students will complete weekly assignments to demonstrate understanding of course material. These assignments will be evaluated based on technical, conceptual, and aesthetic exploration. In addition a multi-week final project will be assigned. This assignment will require deeper exploration, development, and application of course material.
 
 
 Grading
 -----
 
-- 70% Weekly Homework
+- 70% Daily Homework
 - 30% Final Project
 
 Assignments will be graded using the following rough guide. Some assignments are more technical in nature, and will be graded with less emphasis on concept development. **Please note that work that merely meets all stated requirements is considered "C" work.** This is because all assignments are designed to allow (and require) further, self-directed exploration. Higher grades are reserved for work that demonstrates substantial effort and achievement in both technical skills and conceptual development. You are encouraged to think of assignments as starting points, and to build on top of them.
 
-| Grade | Points |
-| --- | --- |
+| Grade | Daily Sketches | Final |
+| --- | --- | --- |
 | F | 0 | Did Not Turn In
 | D | 1 | Incomplete
-| C | 2 | Complete, Average Work
-| B | 3 | Good Creative/Technical Exploration
-| A | 4 | Very Good Creative/Technical Exploration
+| C | 2 | Daily Posting, Minimal Crative/Technical Exploraiton
+| B | 3 | Daily Posting, Good Creative/Technical Exploration
+| A | 4 | Daily Posting, Very Good Creative/Technical Exploration
 
 #### Grade of W
 
@@ -105,10 +107,7 @@ The grade of “N” does not affect the GPA but does indicate a permanent incom
 
 ## Resubmitting Work
 
-In certain cases, you may resubmit work to improve your grade (up to 2 points) on an assignment. In order to resubmit work the following conditions must be met:
-- your original work must not be late
-- your original work must show a substantial effort
-- you must inform me of your resubmitted work by email
+Because this class is structured around daily exploration, I will not be accepting resubmitted assignments.
 
 ## Extra Credit
 
@@ -119,9 +118,9 @@ Each student must have a Github account. We will use Github to turn in and host 
 
 ## Homework
 
-Homework is probably the most important part of this class. If you do the homework regularly and keep up, you will do well. **It will be hard to do well otherwise.** This course involves a new way of thinking, a new language, and a new set of tools. To learn any language or tool, you must use it. A lot. And homework is where you will apply what we discuss discuss in class.
+Homework is probably the most important part of this class. If you do the homework regularly and keep up, you will do well. This course involves a new way of thinking and multiple new tools and languages. To learn any language or tool, you must use it. A lot. And homework is where you will apply what we discuss discuss in class.
 
-Weekly homework will be due at the start of class. Be sure to commit your project to you Github account before this time. Late postings will be marked down one point. Postings turned in more than one week late will not be accepted.
+For the first 10 weeks of the class the homework assignments will involve daily postings of sketches, project progress, and research. You must make an effort to post work throughout the week, late work will not be accepted. Be sure to commit your work to you Github account frequently. 
 
 
 ## Office Hours
@@ -156,7 +155,6 @@ The New School views "academic honesty and integrity" as the duty of every membe
 It is the responsibility of students to learn the procedures specific to their discipline for correctly and appropriately differentiating their own work from that of others.  Compromising your academic integrity may lead to serious consequences, including (but not limited to) one or more of the following: failure of the assignment, failure of the course, academic warning, disciplinary probation, suspension from the university, or dismissal from the university.
 
 
-Student Disability Services
------
+## Student Disability Services
 
 In keeping with the University's policy of providing equal access for students with disabilities, any student with a disability who needs academic accommodations is welcome to meet with me privately.  All conversations will be kept confidential.  Students requesting any accommodations will also need to meet with Jason Luchs in the office of Student Disability Services, who will conduct an intake, and if appropriate, provide an academic accommodation notification letter to you to bring to me.  At that point I will review the letter with you and discuss these accommodations in relation to this course.  Mr. Luchs' office is located in 79 Fifth Avenue, 5th floor. His direct line is (212) 229-5626 x3135.  You may also access more information through the University's web site at http://www.newschool.edu/studentservices/disability/.
