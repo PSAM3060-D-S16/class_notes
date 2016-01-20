@@ -28,99 +28,20 @@ Yes, these instructions will go on forever, I'll interrupt you in a minute.
 — Charles Eames, Design Q&A ([Transcript](http://www.markwunsch.com/eames.html))
 
 
-This is a class about computational form, algorithmic image, generative art, procedural design. In this class we will explore a creative process in which form is made by following defined processes. We will write instructions that a computer will follow to create images, animations, sounds, and sculptures. We will make things that make things.
+This is a class about computational form, algorithmic image, generative art, procedural generation. In this class we will explore a creative process in which form is made by following defined processes. We will write instructions that a computer will follow to create images, animations, sounds, and sculptures. We will make things that make things.
 
 ![Make Things that Make Things](images/make_things.png)
 
-# What Computational Form Is
-
-<style>
-	img { width: 100%;}
-
-</style>
-
-## Image
-
-### Desmond Paul Henry - Untitled - 1962
-![Untitled](https://farm9.staticflickr.com/8243/8560060448_27d951d0ac_k.jpg)
-![Machine](http://desmondhenry.com/media/1015/bombsight-computer-02.jpg)
-[Artist's Site](http://www.desmondhenry.com/)
-
-### Golan Levin - Floccular Portraits - 1999
-![2](http://www.flong.com/storage/images/projects/floccugraph_2.jpg)
-[Floccular Portraits on Artist's Site](http://www.flong.com/projects/floccugraph/)
+- Play not Practice
 
 
+# What Comp Form Is
 
+### [View Slides](what_comp_form_is.html)
 
+# Who I am
 
-## Video
-
-### Craig Reynols - Boids Simulation - 1986
-
-![Boids](http://www.red3d.com/cwr/boids/images/flocking_around_19.gif)
-[Video](https://www.youtube.com/embed/86iQiV3-3IA)
-
-
-### Giuseppe Randazzo - Transmutation - 2012
-
-![Transmutation](http://www.novastructura.net/wp/wp-content/uploads/2013/07/transmutations_frame-08731.jpg)
-[Video](https://vimeo.com/45941313), [Transmutation on Artist's Site](http://www.novastructura.net/wp/works/transmutation01/)
-
-
-
-
-## Sound
-
-### Yoko Ono - Voice Piece for Soprano - 1961
-![Voice Piece for Soprano](images/yoko_ono/yoko_ono_voice_piece.jpg)
-[Voice Piece for Soprano @ Moma](http://www.nytimes.com/2010/07/02/arts/design/02contemporary.html)
-
-### John Cage - 4'33" - 1952
-![4'33"](http://www.moma.org/d/assets/W1siZiIsIjIwMTUvMTAvMjEvMXNvcXVnb3NieV90aGVyZXdpbGxuZXZlcmJlc2lsZW5jZS5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXJlc2l6ZSAyMDAweDIwMDBeIC1ncmF2aXR5IENlbnRlciAtY3JvcCAyMDAweDIwMDArMCswIl1d/therewillneverbesilence.jpg?sha=db5713acfc387367)
-[4'33" on moma.org](http://www.moma.org/calendar/exhibitions/1386?locale=en), [4'33" on wikipedia](https://en.wikipedia.org/wiki/4%E2%80%B233%E2%80%B3)
-
-
-## 3D
-
-### Nervous System - Kinematics Dress 6 - 2015
-![Kinematics Dress 6](http://n-e-r-v-o-u-s.com/projects/i.php?/000/976/Test-337,xlarge.2x.1441893095.jpg)
-[n-e-r-v-o-u-s.com/](http://n-e-r-v-o-u-s.com/)
-
-### Micheal Hansmeyer and Benjamin Dillenburger - Digital Grotesque - 2013
-![Grotto](http://www.digital-grotesque.com/images/540/installation5.jpg)
-[Video](https://vimeo.com/74350367), [Project Site](http://www.digital-grotesque.com/)
-
-
-## Games
-
-### Markus "Notch" Persson - Minecraft - 2009
-![Minecraft](http://plotoon.com/wp-content/uploads/2015/08/minecraft-forest-screenshot.jpg)
-[minecraft.net](https://minecraft.net/)
-
-
-### Tarn Adams and Zach Adams - Dwarf Fortress - 2006
-![Map](http://images.eurogamer.net/2013/articles/a/1/5/5/2/4/0/0/eurogamer-ign5y9.jpg)
-[Dwarf Fortress Site](http://www.bay12games.com/dwarves/)
-
-### No Man's Sky 
-![Screengrab](https://assets.vg247.com/current//2015/06/no_mans_sky_art_2.jpg)
-[Infinite Worlds Trailer](https://www.youtube.com/watch?v=iKcumrtWzDk)
-
-
-# Who I Am
-
-I am Justin Bakse. I direct interactive projects at [Brand New School](http://www.brandnewschool.com), and teach design an programming classes here and there. [This is my site](http://justinbakse.com/).
-
-## w/Greg Schomburg - The Raven - 2013
-![Raven](http://justinbakse.com/preview_2/new_york/raven/images/drawing.jpg)
-
-
-## Fell the Window Out - 2001
-![Fell the Window Out](http://justinbakse.com/preview_2/minneapolis/fell_the_window_out/images/setup.420.jpg)
-
-## Desk - 2015
-![Desk](http://justinbakse.com/preview_2/new_york/combscript/images/top_2.jpg)
+### [View Slides](who_i_am.html)
 
 
 # About this Class
@@ -170,47 +91,11 @@ Our class blog will host your daily experiments and links to content of interest
 
 
 # Tile Reference
-
-## Anni Albers
-![Anni](http://www.moma.org/media/W1siZiIsIjIyMTY4MSJdLFsicCIsImNvbnZlcnQiLCItcmVzaXplIDIwMDB4MjAwMFx1MDAzRSJdXQ.jpg?sha=00147c0b3abde9d0)
-[The Josef & Anni Albers Founation](http://www.albersfoundation.org/), [MOMA](http://www.moma.org/collection/artists/96?=undefined&page=1)
-
-## Matthew Wahl
-![Type](https://d39l2hkdp2esp1.cloudfront.net/img/designer/92/92.jpg?20140923161616)
-![Type](https://farm4.staticflickr.com/3460/3845813985_030f4a63ae_z.jpg?zz=1)
-[Artist's Site](http://www.wahldesign.com/)
-
-## Pauline Gorelov
-![Tiles](http://www.paulinegorelov.com/media/filter/l/img/hyperstructurewhite_modulartile_paulinegorelov_02.jpg)
-![Wall](http://www.paulinegorelov.com/media/filter/l/img/braindead01_modularstickers_paulinegorelov.jpg)
-[Artist's Site](http://www.paulinegorelov.com/)
-
-## Chris Clark
-![Type cube](https://farm3.staticflickr.com/2649/4138406110_f5c0df1e2a_z.jpg?zz=1)
-[Artist's Site](http://www.chris-clarke.co.uk/)
-
-## We Are Plural 
-![Type](http://weareplural.com/wp-content/uploads/2010/02/typeforce_2.jpg)
-[Artist's Site](http://weareplural.com/work/typeforce-01/2/)
-
-## Nintendo
-![zelda](http://www.zeldadungeon.net/Zelda03/Walkthrough/03/002.png)
-![advance wars](http://flyingkirbypub.net/Weekly/Zeron/Maps/Machiavellianism.png)
-
-## Darryl Brown
-![Stamp](http://1.bp.blogspot.com/-6j9iTMENSbA/TwveinllLkI/AAAAAAAABcs/rbmhK3YoRNk/s1600/ThankYouCards2.jpg)
-[Artist's Site](http://darryldesigns.blogspot.com/2012/01/handmade-modular-type.html)
-
-## Unknown
-![Tiles](http://56.media.tumblr.com/22cbad261bbd62e3a35fadb0a36f25b7/tumblr_mhh86bOfQE1qa8awvo1_500.jpg)
-![More Tiles](https://s-media-cache-ak0.pinimg.com/736x/10/08/b9/1008b9eb526e8cc41ee77a6c416b4167.jpg)
-![More Tiles](http://previews.123rf.com/images/claranatoli/claranatoli0701/claranatoli070100082/709614-Traditional-ancient-ceramics-Valencia-Spain-Stock-Photo-spanish-tile.jpg)
-
-
-
+## [View Slides](tile_reference.html)
 
 ## Additional Reading
 
 - [Maze Generation](http://www.jamisbuck.org/mazes/)
 - [Wang Tiles](https://en.wikipedia.org/wiki/Wang_tile)
-- [Wang Tiles in Graphics](http://www.cr31.co.uk/stagecast/wang/intro.html)
+- [Stagecast - Wang Tile Maze Design](http://www.cr31.co.uk/stagecast/wang/intro.html)
+- [Greg Schomburg - Two Minute Posters](http://designergroupies.com/twominuteposters/)
