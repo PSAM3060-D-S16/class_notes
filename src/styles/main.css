@@ -1,6 +1,7 @@
 h1, h2, h3, h4
 {
 	 margin-top: 1.5em;
+	 line-height: 1.25;
 }
 
 h1
@@ -84,6 +85,12 @@ ul ul {
 strong {
 
 	color: #A00;
-
 }
 
+img { width: 100%;}
+
+img:last-of-type { margin-bottom: 1em}
+
+p a + a {
+	margin-left: 2em;
+}
