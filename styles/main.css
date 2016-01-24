@@ -1,6 +1,7 @@
 h1, h2, h3, h4
 {
 	 margin-top: 1.5em;
+	 line-height: 1.15;
 }
 
 h1
@@ -73,6 +74,7 @@ iframe
 
 
 ul {
+	font-size: 1.25em;
 	padding-left: 0px;
 }
 
@@ -84,6 +86,12 @@ ul ul {
 strong {
 
 	color: #A00;
-
 }
 
+img { width: 100%;}
+
+img:last-of-type { margin-bottom: 1em}
+
+p a + a {
+	margin-left: 2em;
+}
