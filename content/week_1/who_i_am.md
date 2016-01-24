@@ -2,6 +2,8 @@
 
 # I am Justin Bakse. I direct interactive projects at [Brand New School](http://www.brandnewschool.com), and teach design an programming classes here and there. [This is my site](http://justinbakse.com/).
 
+# I am personally very interested in computational form, and have used computational methods in a great deal of my work.
+
 ## w/Greg Schomburg - The Raven - 2013
 ![Raven](http://justinbakse.com/preview_2/new_york/raven/images/drawing.jpg)
 [Project Page](http://justinbakse.com/preview_2/new_york/raven/)

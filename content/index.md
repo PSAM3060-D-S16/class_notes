@@ -4,7 +4,7 @@
 ### PSAM3060-D Computational Form
 
 
-#### [Class Blog](http://compform.tumblr.com) • [Syllabus](syllabus.html) • [P5 Sketch Lab](./p5_lab.html) <!-- • [Resources](./resources.html)  -->
+#### [Class Blog](http://compform.tumblr.com) • [Class Github](https://github.com/PSAM3060-D-S16) • [Syllabus](syllabus.html) • [P5 Sketch Lab](./p5_lab.html) <!-- • [Resources](./resources.html)  -->
 
 
 <br />
