@@ -69,6 +69,7 @@ See also: [Wang Tiles](https://en.wikipedia.org/wiki/Wang_tile)
 - What kind of forms does this method lead to naturally? How can this be embraced/avoided?
 - What are the essential elements of this method?
 - How does working within constraints impact creativity?
+- What are the advantages/disadvantaged to working by hand?
 - How would variations on the tile work? Staggered? Triangles? Rectangles?
 - What if each edge/corner had three states instead of two?
 - How could these tiles work in 3 dimensions?
