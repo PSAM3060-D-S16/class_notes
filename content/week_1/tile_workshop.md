@@ -1,8 +1,5 @@
 # Tile Kit Workshop
 
-## Kits
-
-
 ## Repeating Tiles
 
 ### Top matches bottom, left matches right.
@@ -68,8 +65,22 @@ See also: [Wang Tiles](https://en.wikipedia.org/wiki/Wang_tile)
 - How are these design different from/similar to patterns?
 - What kind of forms does this method lead to naturally? How can this be embraced/avoided?
 - What are the essential elements of this method?
+- How does a tile kit like this compare to building kits like lego blocks.
+- How does a tile kit compare to a font?
 - How does working within constraints impact creativity?
 - What are the advantages/disadvantaged to working by hand?
 - How would variations on the tile work? Staggered? Triangles? Rectangles?
 - What if each edge/corner had three states instead of two?
 - How could these tiles work in 3 dimensions?
+
+
+# Workshop
+
+## Create and edge-matched tile kit. Use markers on paper squares. Make up a design that allows rotation,this is faster to draw out than a full set. Once you have made your kit, use it to create a variety of forms. Try building out each letter in the alphabet. 
+
+. The image below shows which tiles you need to make, and how many to many to make of each.
+![edge_counts](./tile_workshop/edge_counts.png)
+
+## After playing with your set, start experimenting however you wish. Before the end of the class take a picture of your work and post it the class blog.
+
+
