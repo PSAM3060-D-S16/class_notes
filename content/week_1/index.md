@@ -119,11 +119,11 @@ Our class blog will host your daily experiments and links to content of interest
 This is it, the first assignment and the beginning of your daily posts.
 
 Daily exercise:
-1. Create a tile set
+1. Create a new tile set.
 2. Use the tile set to create a design.
 3. Screengrab or photograph your work and post to the class blog with the hashtag `#tiles`.
 
-Explore a different idea every day, if you need some ideas consider using one of the following as a prompt: `#paper`, `#pixels`, `#vectors`, `#typography`, `#self-portrait`, `#3d`, `#make-things-that-make-things`, `#hexagons`, `#triangles`, `#photocopier`, `#big`, `#huge`, `#edge`, `#corner`, `#pattern`, `#trade`, `#teamwork`, `#stamps`, `#scissors`
+Explore a different idea every day, if you need some ideas consider using one of the following as a prompt. If you use one of these prompts, include it in your blog post. `#paper`, `#pixels`, `#vectors`, `#typography`, `#self-portrait`, `#3d`, `#make-things-that-make-things`, `#hexagons`, `#triangles`, `#photocopier`, `#big`, `#huge`, `#edge`, `#corner`, `#pattern`, `#trade`, `#teamwork`, `#stamps`, `#scissors`
 
 
 ## Assignment 2 — Research
@@ -135,7 +135,7 @@ Tags: `#artist`, `#tool`, `#language`, `#article`, `#book`, `#image`, `#video`, 
 
 
 ## Notes on Daily Exercises
-This assignment (Assignment 1) is the first assignment based on daily creative exercise. Your goal each day should be to explore an different aspect of the weekly theme. Ideally, you will spend about an hour each day on and idea, resulting in an image or other artifact. Each day you will work on a different idea, possibly informed by something you did early in the week/class.
+This assignment (Assignment 1) is the first assignment based on daily creative exercise. Your goal each day should be to explore a different aspect of the weekly theme. Ideally, you will spend about an hour each day on and idea, resulting in an image or other artifact. Each day you will work on a different idea, possibly informed by something you did early in the week/class.
 
 > What about Fridays?
 
@@ -147,7 +147,7 @@ Yep.
 
 > What if I miss a day?
 
-Thats fine, maybe spend more time on another day and post twice?
+Thats fine, maybe spend more time on another day and post twice.
 
 > Can I spend, say, 6 hours all on one day? Maybe I'll pull an all-nighter.
 
