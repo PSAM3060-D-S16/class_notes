@@ -175,7 +175,7 @@ Keep posting. If you can't do exactly what you want, find something close that y
 
 > I'm tired of looking at the computer screen? Can I do a couple of posts with paper/paint/glue/wood/whatever?
 
-Absolutely. The more variety between your posts the better.
+Absolutely. The more variety between your posts the better. Do make sure that your work relates to the weekly topic.
 
 
 
