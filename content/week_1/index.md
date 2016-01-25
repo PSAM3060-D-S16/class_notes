@@ -120,8 +120,8 @@ This is it, the first assignment and the beginning of your daily posts.
 
 Daily exercise:
 1. Create a tile set
-2. Use the tile set to create a design
-3. Post your image to the class blog with the hashtag `#tiles`
+2. Use the tile set to create a design.
+3. Screengrab or photograph your work and post to the class blog with the hashtag `#tiles`.
 
 Explore a different idea every day, if you need some ideas consider using one of the following as a prompt: `#paper`, `#pixels`, `#vectors`, `#typography`, `#self-portrait`, `#3d`, `#make-things-that-make-things`, `#hexagons`, `#triangles`, `#photocopier`, `#big`, `#huge`, `#edge`, `#corner`, `#pattern`, `#trade`, `#teamwork`, `#stamps`, `#scissors`
 
@@ -135,7 +135,50 @@ Tags: `#artist`, `#tool`, `#language`, `#article`, `#book`, `#image`, `#video`, 
 
 
 ## Notes on Daily Exercises
-This assignment (Assignment 1) is
+This assignment (Assignment 1) is the first assignment based on daily creative exercise. Your goal each day should be to explore an different aspect of the weekly theme. Ideally, you will spend about an hour each day on and idea, resulting in an image or other artifact. Each day you will work on a different idea, possibly informed by something you did early in the week/class.
+
+> What about Fridays?
+
+Some weeks we'll have time set aside in class to make something, some weeks we won't. Don't worry about posting a project on Friday.
+
+> So I should post something the other six days a week?
+
+Yep.
+
+> What if I miss a day?
+
+Thats fine, maybe spend more time on another day and post twice?
+
+> Can I spend, say, 6 hours all on one day? Maybe I'll pull an all-nighter.
+
+Don't do that. This process is about exploring different ideas. Spacing out your work gives you time to think. Creativity often comes in the space between acts.
+
+> What if I make something I like in 15 minutes?
+
+Post it. Then keep working.
+
+> What if I work for an hour and don't really like what I've made?
+
+Post it. Then stop working. Try something different tomorrow.
+
+> An hour is too short. Can I work longer? Can I post a work in progress and keep working on it tomorrow?
+
+If after an hour, you feel excited about what you are doing then keep working or continue the next day. If you are frustrated, post and move on. If you find you often need more than an hour, you might be trying to make things that are too complex.
+
+> I can't decide what to work on today.
+
+If you have more than one idea, just pick one at random. Don't change your mind, just run with it. You are only investing an hour. If you have no ideas, review the class notes, do some Google image searches, be open to any ideas that pop up.
+
+> I can't get whatever technology we are working on this week to work; my computer is broken; I missed class and I'm lost; I'm just lost this week. What should I do?
+
+Keep posting. If you can't do exactly what you want, find something close that you can do and do that. Most weeks you could do pretty interesting projects, that relate to the weekly themes, without even using a computer.
+
+> I'm tired of looking at the computer screen? Can I do a couple of posts with paper/paint/glue/wood/whatever?
+
+Absolutely. The more variety between your posts the better.
+
+
+
 
 
 ## Additional Links

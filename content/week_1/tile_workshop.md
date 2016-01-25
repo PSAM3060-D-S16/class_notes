@@ -43,6 +43,10 @@ See also: [Truchet Tiles](https://en.wikipedia.org/wiki/Truchet_tiles)
 ![edge_form](./tile_workshop/edge_form.png)
 
 
+### A wide variety of looks can be created.
+
+![multi_comp_form](./tile_workshop/multi_comp_form.png)
+
 See also: [Wang Tiles](https://en.wikipedia.org/wiki/Wang_tile)
 
 
@@ -74,11 +78,11 @@ See also: [Wang Tiles](https://en.wikipedia.org/wiki/Wang_tile)
 - How could these tiles work in 3 dimensions?
 
 
-# Workshop
+# Activity
 
 ## Create and edge-matched tile kit. Use markers on paper squares. Make up a design that allows rotation,this is faster to draw out than a full set. Once you have made your kit, use it to create a variety of forms. Try building out each letter in the alphabet. 
 
-. The image below shows which tiles you need to make, and how many to many to make of each.
+##  The image below shows which tiles you need to make, and how many to many to make of each.
 ![edge_counts](./tile_workshop/edge_counts.png)
 
 ## After playing with your set, start experimenting however you wish. Before the end of the class take a picture of your work and post it the class blog.
