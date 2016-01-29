@@ -189,3 +189,5 @@ Absolutely. The more variety between your posts the better. Do make sure that yo
 - [Greg Schomburg - Two Minute Posters](http://designergroupies.com/twominuteposters/)
 - [Immaculate Heart College Art Department Rules](https://www.brainpickings.org/2012/08/10/10-rules-for-students-and-teachers-john-cage-corita-kent/)
 - [Redblob's Links](http://www-cs-students.stanford.edu/~amitp/gameprog.html#tiles)
+- [What Makes Mathmatics Hard to Learn](http://web.media.mit.edu/~minsky/OLPC-1.html)
+- [Explained Visually](http://setosa.io/ev/)

@@ -59,7 +59,7 @@ random order, without repeats
 random(widht/height) vs grid + random(offset)
 
 
-
+look up maps/ heat maps
 
 
 ### Perlin Noise
