@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/class_notes/styles/bootswatch.css">
+	<link rel="stylesheet" type="text/css" href="/class_notes/styles/atelier-health.light.css">
+	<link rel="stylesheet" type="text/css" href="/class_notes/styles/main.css">
+	<script type="text/javascript">
+		var base_url = "/class_notes/";
+	</script>
+
+</head>
+<body>
+	<!-- title:  -->
+	<div class="container">
+		<h1>Week 2 Class Notes</h1>
+<p>Welcome Music: ?</p>
+<p>Intro Activity: Dice</p>
+<p>Today’s Materials: Dice, Paper</p>
+<h1>Random</h1>
+<h2>Generating random numbers</h2>
+<p>The random() function</p>
+<h3>Even distribution</h3>
+<p>random()*range+start
+random(10,10)</p>
+<h3>Random Integers</h3>
+<p>floor, ciel, round</p>
+<h3>Weighted distribution</h3>
+<p>(random() + random())/2*range+start
+2 * random() != random() + random()</p>
+<h3>Normal distributed</h3>
+<p>(random() + random() + random())/3*range+start</p>
+<p><a href="http://anydice.com/articles/three-basic-distributions/">http://anydice.com/articles/three-basic-distributions/</a>
+<a href="http://www.redblobgames.com/articles/probability/damage-rolls.html">http://www.redblobgames.com/articles/probability/damage-rolls.html</a></p>
+<h3>min() and max()</h3>
+<p>max(random(), random())</p>
+<h2>Psuedo-random vs. Random</h2>
+<p>How a psuedo-random number generator works</p>
+<p>Seeds</p>
+<h2>Repeatable Random</h2>
+<p>How to use random in a program, but get the same results each run.
+Beware user input.</p>
+<h2>Modeling a Deck</h2>
+<p>random order, without repeats</p>
+<h2>Populating a map with trees</h2>
+<p>random(widht/height) vs grid + random(offset)</p>
+<h3>Perlin Noise</h3>
+<p>Brownian Motion</p>
+
+	</div>
+	
+	<script type="text/javascript" src="/class_notes/javascript/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="/class_notes/javascript/highlight.pack.js"></script>
+	<script type="text/javascript" src="/class_notes/javascript/p5_example.js"></script>
+	<script type="text/javascript">
+		$( function() {
+			$("table").addClass("table table-bordered");
+		});
+	</script>
+</body>
+</html>
