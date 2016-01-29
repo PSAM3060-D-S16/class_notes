@@ -126,6 +126,10 @@ Daily exercise:
 Explore a different idea every day, if you need some ideas consider using one of the following as a prompt. If you use one of these prompts, include it in your blog post. `#paper`, `#pixels`, `#vectors`, `#typography`, `#self-portrait`, `#3d`, `#make-things-that-make-things`, `#hexagons`, `#triangles`, `#photocopier`, `#big`, `#huge`, `#edge`, `#corner`, `#pattern`, `#trade`, `#teamwork`, `#stamps`, `#scissors`
 
 
+[Brian Eno - Oblique Strategies](https://en.wikipedia.org/wiki/Oblique_Strategies)
+[Oblique Strategies Online](http://stoney.sb.org/eno/oblique.html)
+
+
 ## Assignment 2 — Research
 This week, in addition to your normal daily experiment posting, I'd like you to spend some time online looking at what others have done.
 
