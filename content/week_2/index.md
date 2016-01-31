@@ -24,16 +24,20 @@ floor, ciel, round
 (random() + random())/2*range+start
 2 * random() != random() + random()
 
-
+### min() and max()
+max(random(), random())
 
 ### Normal distributed
 (random() + random() + random())/3*range+start
 
+
+
+### Custom Weights
+
 http://anydice.com/articles/three-basic-distributions/
 http://www.redblobgames.com/articles/probability/damage-rolls.html
 
-### min() and max()
-max(random(), random())
+
 
 
 

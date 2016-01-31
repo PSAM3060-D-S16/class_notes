@@ -18,7 +18,7 @@
 | --- | --- | ---
 | | **Images** |
 | Week 1 | Tiled Graphics | Paper | [class notes](week_1)
-| Week 2 | Generating Randomized Images | Javascript + P5 | [class notes](#)
+| Week 2 | Generating Randomized Images | Javascript + P5 | [class notes](week_2)
 | Week 3 | Generating Vector Data | Adobe Scripting | [class notes](#)
 | Week 4 | Manipulating Vector Data | Adobe Scripting | [class notes](#)
 | | **Video** |
