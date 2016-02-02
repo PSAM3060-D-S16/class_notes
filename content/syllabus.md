@@ -21,7 +21,7 @@ In short, in this class we will make things that make things.
 
 
 
-## Calendar Outline
+## Course Outline
 The following outlines the main topics to be presented in each class. This may be adjusted during the semester.
 
 <style type="text/css"> td:first-child {width: 100px;}</style>
@@ -155,6 +155,8 @@ For the first 10 weeks of the class the homework assignments will involve daily 
 ## Office Hours
 By appointment. Email to arrange.
 
+## Required Reading
+There is no required reading for this class. Links to online articles of interest to class topics will occasionally be provided.
 
 ## Textbook and Materials
 There is no required textbook for this course. Please bring your laptop, a notebook, a sketchbook, and some pens and pencils to each class.

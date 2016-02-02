@@ -258,16 +258,20 @@ First, if your program accepts user input, and that input can influence how many
 Second, if you change your program and add or remove a call to `random()`, you will alter the sequence.
 
 
+# Examples
+
+### Small Multiples
+<a href="./small_mult.js" class="p5_example show-lab show-lab-link hidden">small_mult.js</a>
+
+### Grass
+<a href="./grass.js" class="p5_example show-lab show-lab-link hidden">grass.js</a>
+
+### Brownian Motion
+<a href="./brownian.js" class="p5_example show-lab show-lab-link hidden">brownian.js</a>
+
+[Brownian Motion](https://en.wikipedia.org/wiki/Brownian_motion)
+
+### Horizon
+<a href="./horizon.js" class="p5_example show-lab show-lab-link hidden">horizon.js</a>
 
 
-## Populating a map with trees
-random(widht/height) vs grid + random(offset)
-
-
-look up maps/ heat maps
-
-
-### Perlin Noise
-
-
-Brownian Motion

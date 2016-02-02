@@ -1,4 +1,4 @@
-td:first-child {width: 100px;}
+td:first-child {width: 150px;}
 td:nth-child(2) {width: 250px;}
 td:last-child {width: 100px;}
 a[href^="#"]:not(.btn) { color: gray; text-decoration: none; }

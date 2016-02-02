@@ -9,11 +9,11 @@ function setup() {
 function draw() {
 	background(50, 50, 70);
 
-	fill(150, 150, 150);
-	drawRow(height * 0.5 - 30);
+	// fill(150, 150, 150);
+	// drawRow(height * 0.5 - 30);
 
-	fill(200, 200, 200);
-	drawRow(height * 0.5 - 15);
+	// fill(200, 200, 200);
+	// drawRow(height * 0.5 - 15);
 
 	fill(250, 250, 250);
 	drawRow(height * 0.5);
@@ -26,7 +26,7 @@ function drawRow(y) {
 	var x = 0;
 	while (x < width) {
 		drawObject(x, y);
-		x += 10;
+		x += 15;
 	}
 }
 
@@ -47,7 +47,7 @@ function drawObject(x, y) {
 }
 
 function drawGrass(x, y) {
-	rect(x, y, 10, 20);
+	rect(x, y, 15, 20);
 }
 
 
@@ -64,6 +64,7 @@ function drawTree(x, y) {
 		drawSpruceTree(x, y);
 	}
 }
+
 function drawSpruceTree(x, y) {
 	drawGrass(x, y);
 	var height = floor(min(random(1,4), random(1,4)));
