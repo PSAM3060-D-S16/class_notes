@@ -1,53 +1,47 @@
 # Week 2 Class Notes
 
-Welcome Music: 
-https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel
-http://sunsite.univie.ac.at/Mozart/dice/
-
 Intro Activity: Dice
 
-Today's Materials: Dice, Paper
+Today's Materials: Dice (provided), Paper, Pens, Laptop
 
 Time | Thing
 --- | ---
 3:50 | Dice
-4:00 | Dailies Review
-4:10 | Git and P5 (re)intro
+4:00 | Homework Review
+4:10 | P5 (re)intro
 4:20 | Random
 5:20 | Setting up Github, Starting a P5 Project
 5:30 | In class work-time: Randomized Drawings
 
+# Homework Review
 
-# What Git Is
-...
+To make browsing work easier please tag all of your posts with the following tags:
+- your name with ths format `#first_last`
+- the week `#week_1`
+- the assignment theme `#tiles`
 
-# Creating a Github Account
-...
+If you see interesting work, books, or tools related to the class online. Please do post links to the blog. 
 
-# Starting a New Project
-### Create a Repo on Github
-### Clone the Repo to Your Computer, With Github for Mac
-### Add/Modify Files
-### Commit the Files
-### Push Your Commits
-
-
+**Whenever you post work you didn't make yourself include a link to the source, and if possible the artist's name.**
+	
 # What p5 Is
-...
+From the p5js Homepage:
 
-http://pucd2035-e-f15.github.io/class_notes/
+> p5.js is a JavaScript library that starts with the original goal of Processing, to make coding accessible for artists, designers, educators, and beginners, and reinterprets this for today’s web.
 
-# Creating a Simple Javascript/P5 Project
-### Create index.html
-### Add p5.js
-### Add sketch.js
-### Commit and Push Your Work
+P5 is a Library you can use with javascript to make drawings and animations in HTML5 Canvas Elements. It makes getting set up and working faster and provides simple functions for common tasks. It also allows for a more imparative programming style, similar to Processing.
+
+If you have never worked with with Processing or p5, you'll need to do some reading and learning on your own. Here are some resources to get you started quickly:
+
+- [p5.js Website](http://p5js.org/)
+- [Justin's Creative Computing Class Notes](http://pucd2035-e-f15.github.io/class_notes/)
 
 
+# The Methodical Application of Randomness
 
-# Random Values
+## Random Values
 
-### Generating random numbers
+### Generating Random Numbers
 Plain Javascript provides `Math.random()` to generate a random number. 
 Processing provides the `random()` for generating random numbers.
 Without any parameters, `random()` generates a random number between 0 and 1 (not including the 1). You can pass paramters to control the range of the number. The numbers produced by random should be pretty close to evenly distributed.
@@ -116,11 +110,11 @@ P5 also provides the [randomGausian()](http://p5js.org/reference/#/p5/randomGaus
 [Redblob Post](http://www.redblobgames.com/articles/probability/damage-rolls.html)
 
 
-# Random Visualizer
+### Random Value Visualizer
 <a href="./dice.js" class="p5_example show-lab show-lab-link hidden">dice</a>
 
 
-# Random Choices
+## Random Choices
 
 If you want your code to make a decision at random, you can combine `random()` with and conditional (`if`) statement.
 
@@ -182,7 +176,7 @@ if (random(100) < 20) {
 ```
 
 
-# Dice vs. Decks
+## Dice vs. Decks
 
 If you roll a die a few times you might get the same value more than once, and it might take a long time before a particular value pops up. 
 
@@ -224,12 +218,12 @@ function setup() {
 
 ```
 
-# Deck Visualizer
+### Deck Visualizer
 <a href="./cards.js" class="p5_example show-lab show-lab-link hidden">dice</a>
 
 
 
-# Psuedo-random vs. Random
+## Psuedo-random vs. Random
 
 If your computer is working right, it represents a deterministic system. When the computer is in a particular state and performs an instruction, the resulting state will always be the same. **By definition, the results are never random.**
 
@@ -258,7 +252,7 @@ First, if your program accepts user input, and that input can influence how many
 Second, if you change your program and add or remove a call to `random()`, you will alter the sequence.
 
 
-# Examples
+# Study Examples
 
 ### Small Multiples
 <a href="./small_mult.js" class="p5_example show-lab show-lab-link hidden">small_mult.js</a>
@@ -275,3 +269,60 @@ Second, if you change your program and add or remove a call to `random()`, you w
 <a href="./horizon.js" class="p5_example show-lab show-lab-link hidden">horizon.js</a>
 
 
+
+# Break
+
+# Workshop: `Hello, World` 
+
+### Recommended Tools
+- Github Desktop for Mac [https://desktop.github.com/]
+- Google Chrome [https://www.google.com/chrome/browser/desktop/]
+- Atom [https://atom.io/]
+  - Atom Package: jsformat
+  - Atom Package: linter
+  - Atom Package: linter-jshint
+  - Atom Package: atom-live-server
+
+### What Git and Github Are
+
+[Git](http://git-scm.com/) is a version control system. As you work on a project it will grow and change. Git keeps track of the changes you make to the files in your project, keeping a valuable history. With version control, you can review changes to a file over time and you can revert a single file or entire project to an earlier version if (when) something goes wrong. Git also provides powerful tools for sharing your work with others and merging the work of teammates.
+
+[Github](http://www.github.com) is a service that hosts software projects that use Git. Github builds on Git, adding features for collaborative coding such as bug tracking and code reviews. Github hosts a huge array of open-source and private projects and libraries.
+
+Normally, you use the Git software through its command line interface. If you are not comfortable using the command line, you won't be comfortable using Git in this way. [Github Desktop](https://desktop.github.com/) is a simple graphical user interface for Git, with added integration with Github. Github desktop isn't as powerful as the command line interface, but it can cover the basic workflows we'll use in class.
+
+
+
+### Getting Started
+
+For the first few weeks we'll be using p5 for our sketches. Rather than create a seperate project repo for each sketch, keep your sketches organized on one repo. I've created a template project for your sketches.
+
+We'll run through these steps to get up and running with the template together in class.
+
+- Starting a New Project
+  - Create a Github Account / Log In to Github
+  - Create a Repo on Github
+  - Clone the Repo to Your Computer, With Github for Mac
+  - Add/Modify Files
+  - Commit the Files
+  - Push Your Commits
+
+
+- Use the Class p5 Sketches Template
+  - Download (Don't Fork) the Template
+  - Add the Files to Your Project
+  - Verify the Starter Sketches Work
+  - Commit and Push
+
+
+- Start Sketching
+
+# Procedurally Generated Image Reference
+[View Slides](slides.html)
+
+# Links
+
+- [Mozart Dice](https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel)
+- [Mozart Dice 2](http://sunsite.univie.ac.at/Mozart/dice/)
+- [Mozart Dice 3](https://www.youtube.com/watch?v=nFVmh9WNnDw)
+- [Creative Computing Week 2 Random Drawings](http://pucd2035-e-f15.github.io/class_notes/week_2/class_work.html)
