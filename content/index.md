@@ -61,9 +61,7 @@
 | Week 14 | Final Project Work Time, Special Topic Lecture
 | Week 15 | Final Critique | 
 
-{block:IfEnableEndlessScrolling}
-<script type="text/javascript" src="http://static.tumblr.com/0szq8b5/R0cmg0bw1/tumblr-endless-scrolling.js"></script>
-{/block:IfEnableEndlessScrolling}
+
 
 
 <a href="sierpinski.js" class="p5_example show-titled-lab-link hidden">sierpinski.js</a>
