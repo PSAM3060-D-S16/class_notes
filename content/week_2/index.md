@@ -23,7 +23,13 @@ To make browsing work easier please tag all of your posts with the following tag
 If you see interesting work, books, or tools related to the class online. Please do post links to the blog. 
 
 **Whenever you post work you didn't make yourself include a link to the source, and if possible the artist's name.**
-	
+
+
+# Procedurally Generated Images
+
+### [View Slides](slides.html)
+
+
 # What p5 Is
 From the p5js Homepage:
 
@@ -37,7 +43,9 @@ If you have never worked with with Processing or p5, you'll need to do some read
 - [Justin's Creative Computing Class Notes](http://pucd2035-e-f15.github.io/class_notes/)
 
 
-# The Methodical Application of Randomness
+
+
+# The Methodical Application of Chance
 
 ## Random Values
 
@@ -317,8 +325,7 @@ We'll run through these steps to get up and running with the template together i
 
 - Start Sketching
 
-# Procedurally Generated Image Reference
-[View Slides](slides.html)
+
 
 # Links
 
