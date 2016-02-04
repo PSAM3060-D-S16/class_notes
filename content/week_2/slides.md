@@ -1,4 +1,4 @@
-### Jean Arp - Collage with Squares Arranged According to the Laws of Chance
+### Jean Arp - Collage with Squares Arranged According to the Laws of Chance - 1917
 ![Chance](https://olearygraphics.files.wordpress.com/2010/10/arp-squares.jpg?w=1620)
 
 ### James Paterson (Presstube) - Page 0 (Detail) - 2004
@@ -20,6 +20,11 @@
 [substrate](http://www.complexification.net/gallery/machines/substrate/index.php)
 [bubble chamber](http://www.complexification.net/gallery/machines/bubblechamber/)
 
+### Dave Bollinger
+![1](images/bollinger.png)
+![2](images/bollinger2.png)
+[Photostream](https://www.flickr.com/photos/davebollinger/)
+
 ### JK Keller - Echo #12 - 2009
 ![Echo #12](http://jk-keller.com/dirty_mousepads/_img/jk_keller-echo-12-page.jpg)
 [Arist's Site](http://jk-keller.com/)
@@ -39,6 +44,11 @@
 ![Untitled](http://justinbakse.com/preview_2/detroit/vines/images/illustrator.png)
 
 
+### Greg Schomburg - Smeary Cloud Study - c. 2015
+![Smeary](images/schomburg.png)
+![Pencils](images/s3izpencils.jpg)
+[Source](https://github.com/gschomburg/sketches/tree/master/smearycloud)
+[Pencils](http://s3iz.com/index_flourish.html)
 
 ### Cellar Door Games - Rogue Legacy - 2013
 ![Map](http://cdn.gamer-network.net/2013/06/21/141458-steamworkshop_webupload_previewfile_136969358_preview-1.png)
