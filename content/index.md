@@ -14,6 +14,7 @@
 <script type="text/javascript" src="javascript/p5.min.js"></script>
 <script type="text/javascript" src="sierpinski.js"></script>
 
+<!--
 | Week | Topic | Tool
 | --- | --- | ---
 | | **Images** |
@@ -36,14 +37,14 @@
 | Week 13 | Final Project Work Time, Special Topic Lecture
 | Week 14 | Final Project Work Time, Special Topic Lecture
 | Week 15 | Final Critique | 
-
+-->
 
 | Week | Topic | Tool
 | --- | --- | ---
 | | **Images** |
 | Week 1 Jan 29 | Tiled Graphics | Paper | [class notes](week_1)
 | Week 2 Feb 5 | Generating Randomized Images | Javascript + P5 | [class notes](week_2)
-| Week 3 Feb 12 | Working with Pixels | Javascript + P5 | [class notes](week_2)
+| Week 3 Feb 12 | Working with Pixels | Javascript + P5 | [class notes](week_3)
 | Week 4 Feb 19 | Turtle Graphics and Drawing Machines | Javascript + P5 | [class notes](#)
 | Week 5 Feb 26 | Creating Vector Data | Adobe Scripting | [class notes](#)
 | | **Video** |
