@@ -13,8 +13,88 @@
 <body>
 	<!-- title:  -->
 	<div class="container">
-		<h3>Perlin Noise</h3>
+		<h1>Image Maps</h1>
+<h1>Working with Pixel Data in p5</h1>
+<p>The p5 library provides functions for loading, displaying, manipulating, and exporting images. Visit the p5 reference to see a list of these functions and example code.</p>
+<p><a href="http://p5js.org/reference/#group-Image">p5 Reference</a></p>
+<p><a href="./basic_image.js" class="p5_example show-lab show-lab-link hidden">random</a></p>
+<h1>Understanding the <code>.pixels</code> Data</h1>
+<p>When you call <code>myImage.loadPixels()</code>, p5 will store the image data into an array <code>myImage.pixels[]</code>. You can then read and manipulate the values in the array to modify the image data. Call <code>myImage.updatePixels()</code> when you are finished, and p5 will update the image based on the values you have set.</p>
+<p>To use <code>.pixels[]</code> effectively, you need to know how the data is stored in the array. The <a href="http://p5js.org/reference/#/p5/pixels%5B%5D">p5 reference</a>  describes how the data is laid out.</p>
+<ul>
+<li>The data is stored in an array.</li>
+<li>A single pixel is stored in 4 values representing the red, green, blue, and alpha components of a pixel.</li>
+<li>Pixels are stored starting from the upperleft corner, moving left to right and then top to bottom.</li>
+</ul>
+<h1>A 3x3 Example</h1>
+<p><img src="cross.png" alt="Cross"></p>
+<pre><code>[<span class="hljs-number">0</span>,   <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>,     <span class="hljs-number">255</span>,   <span class="hljs-number">0</span>,   <span class="hljs-number">0</span>, <span class="hljs-number">255</span>,       <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>, 
+ <span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>,     <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>,     <span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>,
+ <span class="hljs-number">0</span>,   <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>,     <span class="hljs-number">255</span>,   <span class="hljs-number">0</span>,   <span class="hljs-number">0</span>, <span class="hljs-number">255</span>,       <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>]
+
+</code></pre>
+<h1>Addressing a Pixel</h1>
+<p>Say we wanted to change the color of the center pixel in the image above. That pixel is in the second row and the second column. If we start counting rows and columns at 0, then the pixel is at <code>x = 1, y = 1</code>;</p>
+<p>We can find the index in the array for that pixel by:</p>
+<pre><code>x = <span class="hljs-number">1</span><span class="hljs-comment">;</span>
+y = <span class="hljs-number">1</span><span class="hljs-comment">;</span>
+<span class="hljs-keyword">width</span> = <span class="hljs-number">3</span><span class="hljs-comment">;</span>
+components_per_pixel = <span class="hljs-number">4</span><span class="hljs-comment">; //r, g, b, a</span>
+
+pixelIndex = (y * <span class="hljs-keyword">width</span> + x) * components_per_pixel<span class="hljs-comment">;</span>
+
+<span class="hljs-comment">// 16</span>
+
+pixels[pixelIndex]     <span class="hljs-comment">// 16 red</span>
+pixels[pixelIndex + <span class="hljs-number">1</span>] <span class="hljs-comment">// 17 green</span>
+pixels[pixelIndex + <span class="hljs-number">2</span>] <span class="hljs-comment">// 18 blue</span>
+pixels[pixelIndex + <span class="hljs-number">3</span>] <span class="hljs-comment">// 19 alpha</span>
+
+</code></pre>
+<h1>Image as Data</h1>
+<p>We usually interpret the data in an image as representing the intensity of gray or intesity of red, green, and blue in each pixel of the image. We can use images to store different data instead. In 3D rendering, images are often used to hold information like shininess, luminance, and bumpiness. You can use an image whenever you want to vary a parameter spacially.</p>
+<h1>Study Examples</h1>
+<h3>Creating an Image from Scratch</h3>
+<p><img src="https://raw.githubusercontent.com/jbakse/p5_sketches/master/sketch_createimage/output.jpg" alt="Create Image">
+<a href="https://github.com/jbakse/p5_sketches/tree/master/sketch_createimage">Source</a></p>
+<h3>Filtering an Image</h3>
+<p><img src="https://raw.githubusercontent.com/jbakse/p5_sketches/master/sketch_filter/output.jpg" alt="Image Filter">
+<a href="https://github.com/jbakse/p5_sketches/tree/master/sketch_filter">Source</a></p>
+<h3>Using an Image as Input</h3>
+<p><img src="https://raw.githubusercontent.com/jbakse/p5_sketches/master/sketch_grass/output.jpg" alt="Image Filter">
+<a href="https://github.com/jbakse/p5_sketches/tree/master/sketch_grass">Source</a></p>
+<h3>Perlin Noise</h3>
 <p>look up maps/ heat maps</p>
+<h1>Reference Images</h1>
+<ul>
+<li><a href="http://www.evilmadscientist.com/2012/stipplegen2/">Evil Mad Scientist - Stipple Gen</a></li>
+<li><a href="http://www.flong.com/projects/floccugraph/">Golan Levin - Floccular Portraits</a></li>
+</ul>
+<p><img src="images/2014_in.png" alt="2014">
+<img src="images/2014_out.png" alt="2014">
+<img src="images/castle_in.png" alt="castle">
+<img src="images/castle_out.png" alt="castle"></p>
+<ul>
+<li><a href="http://sketching-in-hardware.com/2014/">Greg Schomburg - Sketching 2014 Site</a></li>
+<li><a href="https://deepart.io/">Deepart.io</a>
+Link to the Procedure Island paper</li>
+</ul>
+<h2>Sergio Albiac</h2>
+<p><img src="http://www.sergioalbiac.com/images/loa03.jpg" alt="Sergio">
+<img src="http://www.sergioalbiac.com/images/mf00.jpg" alt="Sergio"></p>
+<ul>
+<li><a href="http://www.sergioalbiac.com/">Sergio Albiac</a></li>
+</ul>
+<h1>Misc Links</h1>
+<ul>
+<li><a href="https://www.google.com/search?q=tron+without+visual+effects&amp;safe=off&amp;espv=2&amp;biw=1280&amp;bih=1297&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ved=0ahUKEwitzuD9hefKAhWB1xQKHSdLCVUQ_AUIBigB#safe=off&amp;tbm=isch&amp;q=original+tron+behind+the+scenes&amp;imgrc=3ej5bx5VYdhaCM%253A">Google Image Tron BTS</a></li>
+<li><a href="http://jbakse.github.io/comp_demos/additive_synthesis/">Additive Synthesis Presentation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Perlin_noise">Perlin Noise</a></li>
+<li><a href="http://www.noisemachine.com/talk1/6.html">Ken Perlin Talk on Perlin Noise</a></li>
+<li><a href="http://freespace.virgin.net/hugo.elias/models/m_perlin.htm">How Perlin Noise is Made</a></li>
+<li><a href="http://p5js.org/reference/#/p5/noise">p5 Perlin Noise Function</a></li>
+<li><a href="http://rasterbator.net/Home/Faq">Rasterbator</a></li>
+</ul>
 
 	</div>
 	
