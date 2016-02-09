@@ -95,9 +95,11 @@ Reference
 Link to the Procedure Island paper
 
 
-Examples To Make
-- Pixel Generator (Maybe the Sierpinski Triangle from the home page)
-- Image Filter, some sort of split channel effect?
-- Image Filter find edges?
-- Hairy Type Image Lookup
-- Perlin noise islands?
+
+
+https://www.google.com/search?q=tron+without+visual+effects&safe=off&espv=2&biw=1280&bih=1297&source=lnms&tbm=isch&sa=X&ved=0ahUKEwitzuD9hefKAhWB1xQKHSdLCVUQ_AUIBigB#safe=off&tbm=isch&q=original+tron+behind+the+scenes&imgrc=3ej5bx5VYdhaCM%3A
+http://jbakse.github.io/comp_demos/additive_synthesis/
+https://en.wikipedia.org/wiki/Perlin_noise
+http://freespace.virgin.net/hugo.elias/models/m_perlin.htm
+http://devmag.org.za/2009/04/25/perlin-noise/
+[salt...]http://www.noisemachine.com/talk1/6.html
