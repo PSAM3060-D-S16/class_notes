@@ -87,19 +87,29 @@ We usually interpret the data in an image as representing the intensity of gray 
 look up maps/ heat maps
 
 
-Reference
-- Egg bot
-- That Golan Levin Face 
-- 
+# Reference Images
+- [Evil Mad Scientist - Stipple Gen](http://www.evilmadscientist.com/2012/stipplegen2/)
+- [Golan Levin - Floccular Portraits](http://www.flong.com/projects/floccugraph/)
 
+![2014](images/2014_in.png)
+![2014](images/2014_out.png)
+![castle](images/castle_in.png)
+![castle](images/castle_out.png)
+
+- [Greg Schomburg - Sketching 2014 Site](http://sketching-in-hardware.com/2014/)
+- [Deepart.io](https://deepart.io/)
 Link to the Procedure Island paper
 
+## Sergio Albiac
+![Sergio](http://www.sergioalbiac.com/images/loa03.jpg)
+![Sergio](http://www.sergioalbiac.com/images/mf00.jpg)
+- [Sergio Albiac](http://www.sergioalbiac.com/)
+# Misc Links
 
-
-
-https://www.google.com/search?q=tron+without+visual+effects&safe=off&espv=2&biw=1280&bih=1297&source=lnms&tbm=isch&sa=X&ved=0ahUKEwitzuD9hefKAhWB1xQKHSdLCVUQ_AUIBigB#safe=off&tbm=isch&q=original+tron+behind+the+scenes&imgrc=3ej5bx5VYdhaCM%3A
-http://jbakse.github.io/comp_demos/additive_synthesis/
-https://en.wikipedia.org/wiki/Perlin_noise
-http://freespace.virgin.net/hugo.elias/models/m_perlin.htm
-http://devmag.org.za/2009/04/25/perlin-noise/
-[salt...]http://www.noisemachine.com/talk1/6.html
+- [Google Image Tron BTS](https://www.google.com/search?q=tron+without+visual+effects&safe=off&espv=2&biw=1280&bih=1297&source=lnms&tbm=isch&sa=X&ved=0ahUKEwitzuD9hefKAhWB1xQKHSdLCVUQ_AUIBigB#safe=off&tbm=isch&q=original+tron+behind+the+scenes&imgrc=3ej5bx5VYdhaCM%3A)
+- [Additive Synthesis Presentation](http://jbakse.github.io/comp_demos/additive_synthesis/)
+- [Perlin Noise](https://en.wikipedia.org/wiki/Perlin_noise)
+- [Ken Perlin Talk on Perlin Noise](http://www.noisemachine.com/talk1/6.html)
+- [How Perlin Noise is Made](http://freespace.virgin.net/hugo.elias/models/m_perlin.htm)
+- [p5 Perlin Noise Function](http://p5js.org/reference/#/p5/noise)
+- [Rasterbator](http://rasterbator.net/Home/Faq)
