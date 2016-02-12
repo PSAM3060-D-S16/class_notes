@@ -1,5 +1,25 @@
 
-# Image Maps
+# Week 3 - Pixel Data
+
+Time | Thing
+--- | ---
+3:50 | Sketch Postings Review
+4:10 | Syllabus Updates
+4:20 | Pixel Data 
+4:30 | Study Examples
+5:20 | Break
+5:30 | In class work-time: Randomized Drawings
+
+
+## Sketch Postings Review
+[Class Sketch Blog](http://compform.tumblr.com)
+
+## Syllabus Update
+[Update Calendar](../index.html)
+
+
+## Updated Grading Rubric
+[See Syllabus](../syllabus.html)
 
 
 
@@ -83,27 +103,30 @@ We usually interpret the data in an image as representing the intensity of gray 
 
 
 
-### Perlin Noise
+<!-- ### Perlin Noise
 look up maps/ heat maps
-
+ -->
 
 # Reference Images
-- [Evil Mad Scientist - Stipple Gen](http://www.evilmadscientist.com/2012/stipplegen2/)
-- [Golan Levin - Floccular Portraits](http://www.flong.com/projects/floccugraph/)
+## [View Slides](slides.html)
 
-![2014](images/2014_in.png)
-![2014](images/2014_out.png)
-![castle](images/castle_in.png)
-![castle](images/castle_out.png)
+# Assigment
 
-- [Greg Schomburg - Sketching 2014 Site](http://sketching-in-hardware.com/2014/)
-- [Deepart.io](https://deepart.io/)
-Link to the Procedure Island paper
+Create a daily p5.js sketch exploring the topics presented in class. Post an image of your results each day to the class sketch blog.
 
-## Sergio Albiac
-![Sergio](http://www.sergioalbiac.com/images/loa03.jpg)
-![Sergio](http://www.sergioalbiac.com/images/mf00.jpg)
-- [Sergio Albiac](http://www.sergioalbiac.com/)
+For those of you who prefer a little more direction, some optional prompts:
+
+`#sampler` In cross-stiching and embroidery samplers are work pieces created to demonstrate skill. They usually feature an alphabet, and a quote, with the content be secondary to the craft. Play off of this idea by making a sketch that processes an image of the alphabet. [Sample Samplers](https://www.google.com/search?q=sampler+cross+stitch&biw=1280&bih=1297&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi4zf_MmPHKAhXLWD4KHcQGAEAQ_AUIBygC)
+
+`#ouroboros` Feed one of your screengrabs from an early sketch into a new sketch. Feed the result back into itself. Post all three images.
+
+`#pixels_plus_tiles` Combine pixel processing with a tile set.
+
+`#GIGO` [Garbage In Garbage Out](https://en.wikipedia.org/wiki/Garbage_in,_garbage_out). Subvert the concept of GIGO by making a program that takes an uninteresting image and makes an interesting one.
+
+
+
+
 # Misc Links
 
 - [Google Image Tron BTS](https://www.google.com/search?q=tron+without+visual+effects&safe=off&espv=2&biw=1280&bih=1297&source=lnms&tbm=isch&sa=X&ved=0ahUKEwitzuD9hefKAhWB1xQKHSdLCVUQ_AUIBigB#safe=off&tbm=isch&q=original+tron+behind+the+scenes&imgrc=3ej5bx5VYdhaCM%3A)

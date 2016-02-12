@@ -32,18 +32,18 @@ The following outlines the main topics to be presented in each class. This may b
 | | **Images** |
 | Week 1 | Tiled Graphics | Paper 
 | Week 2 | Generating Randomized Images | Javascript + P5 
-| Week 3 | Generating Vector Data | Adobe Scripting 
-| Week 4 | Manipulating Vector Data | Adobe Scripting 
+| Week 3 | Working With Pixels | Javascript + P5
+| Week 4 | Turtle Graphics | Javascript + P5 
+| Week 5 | Creating Vector Data | Adobe Scripting
 | | **Video** |
-| Week 5 | Generating Animations | Javascript + P5 
-| Week 6 | Manipulating Live Video | Quartz Composer 
+| Week 6 | Generating Animations | Javascript + P5 
+| Week 7 | Manipulating Live Video | Quartz Composer 
 | | **Sound** |
-| Week 7 | Visualizing Sound | Quartz Composer 
-| Week 8 | Generating Sound | TBD 
+| Week 8 | Visualizing Sound | Quartz Composer 
+| Week 9 | Generating Sound | TBD 
 | | **Miscellanea** |
-| Week 9 | Generating Text | Javascript 
-| Week 10 | Generating 3D Forms | OpenSCAD 
-| Week 11 | TBD | TBD 
+| Week 10 | Generating Text | Javascript 
+| Week 11 | Generating 3D Forms | OpenSCAD 
 | | **Final Project** |
 | Week 12 | Final Project Work Time,  Special Topic Lecture
 | Week 13 | Final Project Work Time,  Special Topic Lecture
@@ -82,9 +82,9 @@ Assignments will be graded using the following rough guide. Some assignments are
 | --- | --- | --- |
 | F | 0 | Did Not Turn In
 | D | 1 | Incomplete
-| C | 2 | Daily Posting, Minimal Crative/Technical Exploraiton
-| B | 3 | Daily Posting, Good Creative/Technical Exploration
-| A | 4 | Daily Posting, Very Good Creative/Technical Exploration
+| C | 2 | 2-3 Posts Per Week, Average Crative/Technical Exploraiton
+| B | 3 | 3-4 Posts per Week, Good Creative/Technical Exploration
+| A | 4 | 4-5 Posts per Week, Very Good Creative/Technical Exploration
 
 
 ### Undergraduate Grading
