@@ -2,6 +2,15 @@
 
 ### Intro Activity - Cards as Array, Queue, Stack, Set
 
+Time | Thing
+--- | ---
+3:50 | Sketch Postings Review
+4:10 | Logo and Turtle Graphics
+4:40 | Push and Pop
+5:30 | Break
+5:40 | Advanced Topic: How the Turtle Object Works
+6:20 | Closing Notes and Assignment
+
 ### Sketch Postings Review
 [Class Sketch Blog](http://compform.tumblr.com)
 
@@ -14,25 +23,66 @@ One of the ideas introduced in Logo was "turtle graphics". In logo one can issue
 
 Turtle robots were also produced, which allowed children a more physical experience. 
 
-Wikipedia: 
 [Logo](https://en.wikipedia.org/wiki/Logo_(programming_language))
 [Turtle Graphics](https://en.wikipedia.org/wiki/Turtle_graphics)
 
 
 # Our Simple Turtle
 
-## `myTurtle = createTurtle(x, y)`
-## `myTurtle.forward(distance)`
-## `myTurtle.backward(distance)`
-## `myTurtle.left(angle)`
-## `myTurtle.right(angle)`
-## `myTurtle.jumpTo(x, y)`
+I've created a basic implementation of a turtle, grab [the code on github](https://github.com/jbakse/p5_sketches/tree/master/sketch_turtle_basic).
+
+## `myTurtle = new Turtle(x, y)`
+turtle constructor, creates a turtle object
+takes optional x, y starting coordinates (default is center of sketch)
+
+## `myTurtle.moveForward(distance)`
+moves the turtle along its current bearing, drawing a line if pen is down
+
+## `myTurtle.moveBackward(distance)`
+moves the turtle backward from its current bearing, drawing a line if pen is down
+
+## `myTurtle.moveTo(x, y)`
+instantly transports the turtle to the provided x, y location, drawing a line if pen is down
+
+## `myTurtle.turnRight(angleDegrees)`
+rotates the turtle's bearing clockwise by the provided angle in degrees
+
+## `myTurtle.turnLeft(angleDegrees)`
+rotates the turtle's bearing counter-clockwise by the provided angle in degrees
+
+## `myTurtle.turnTo(angleDegrees)`
+changes the turtle's bearing to the provided angle in degrees
+
 ## `myTurtle.penUp()`
+tells the turtle to move without drawing
+
 ## `myTurtle.penDown()`
+tells the turtle to draw a line when it moves
+
+## `myTurtle.image(image, width, height)`
+draws and image centered on the turtle's current location and alligned with the turtle's rotation
+
 
 
 ## Example 1
+
+<a href="./turtle_basic.js" class="p5_example show-lab show-lab-link hidden">turtle_basic.js</a>
+
+
 ## Example 2
+<a href="./turtle_image.js" class="p5_example show-lab show-lab-link hidden">turtle_image.js</a>
+
+
+# Notes on the Turtle
+You can use turtle graphics to create drawings with a wide variety of styles, but turtle graphics lends itself to curvy/spirography drawings naturally. This is largely due to two differences in the way the turtle works vs p5's `line()`.
+
+- Positions and angles are relative instead of absolute.
+- Lines are specified in terms of angle and distance instead of x and y.
+
+
+
+
+
 
 # Push and Pop
 
@@ -49,44 +99,63 @@ console.log("item", item);
 ```
 
 ## P5 `push()` and `pop()`
-```javascript
-function setup() {
-	createCanvas(windowWidth, windowHeight);
-}
 
-function draw() {
-    
-    // draw a ball
-    // commenting in the next line draws a ball
-    // but also changes how the rectangle is drawn
-    // drawBall(100, 100);
-    
-    // draw a rectangle
-    fill(128, 128, 128);
-    stroke(0, 0, 0);
-    rect(80, 140, 40, 40);
-}
+<a href="./p5_pushpop.js" class="p5_example show-lab show-lab-link hidden">p5_pushpop.js</a>
 
-function drawBall(x, y){
-    //push();
-    fill(255, 0, 0);
-    stroke(0, 0, 255);
-    strokeWeight(5);
-    ellipse(x, y, 40, 40);
-    //pop();
-}
-```
+P5 Reference:  
+[push()](http://p5js.org/reference/#/p5/push)
+[pop()](http://p5js.org/reference/#/p5/pop)
 
-## `myTurtle.push()` and `myTurtle.pop()`
+# Turtle, Push, Pop
+
+## `myTurtle.pushState()`
+records the turtle's current state (position, bearing, etc.) to a stack so that changes can be undone easily
+
+## `myTurtle.popState()`
+restores the turtle's state to the top recorded state on the stack
 
 
-## Example
+## Turtle w/ Push + Pop
+<a href="./turtle_pushpop.js" class="p5_example show-lab show-lab-link hidden">turtle_pushpop.js</a>
+
+## Turtle Tree
+<a href="./turtle_tree.js" class="p5_example show-lab show-lab-link hidden">turtle_tree.js</a>
 
 
-# How the Turtle Works (Javascript Prototype OOP)
+
+# Break
+
+
+# How the Turtle Object Works (Javascript Prototype OOP)
 
 ## A Data Object
 
 ## Object Methods
 
 ## Prototypical Inheritence
+
+
+# Continued Reading
+In these first few weeks we've looked at some intermediate topics related to drawing still images in p5. We'll be moving on to other topics in the coming weeks, but if you want to continue with drawing you might want to check out
+[The Nature of Code](http://www.amazon.com/Nature-Code-Daniel-Shiffman-ebook/dp/B00BPFT8D4/) by Daniel Shiffman. Daniel teaches over at  NYU ITP, contributes heavily to Processing and p5.js. The Nature of Code covers a lot of interesting topics with code in Processing. Also check out his [Youtube channel](https://www.youtube.com/channel/UCvjgXvBlbQiydffZU7m1_aw).
+
+# Random Tip: Chrome Task Manager
+While you are working you might occassionaly create a script that gets stuck or takes a very long time to execute. This will freeze up the Chrome tab the script is running in. [Use the task manager to stop your script](https://support.google.com/chrome/answer/95672?hl=en).
+
+
+# Assigment
+
+Create a daily p5.js sketch exploring the topics presented in class. Post an image of your results each day to the class sketch blog.
+
+For those of you who prefer a little more direction, some optional prompts:
+
+`#turtle_plus_random` Without random, turtle graphics tend to have a machine-made quality, throwing a little random chance into your moves and turns can make things look more natural.
+
+`#image_only` Keep the pen up, and do all your drawing using `.image`
+
+`#recursive_turtle` Try out making a drawing using a recursive function. Try to make something that looks very different from the tree example.
+
+
+# Links
+
+- [Beautiful Programming](http://beautifulprogramming.com/)
