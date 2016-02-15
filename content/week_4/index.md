@@ -17,9 +17,9 @@ Time | Thing
 
 
 # Logo and Turtle Graphics
-Logo is a computer programming language, created in 1967 at the (now) MIT Media Lab to explore how programming can help children learn critical thinking and problem solving. One of the creaters of Logo, Seymour Papert, wrote [Mindstorms](http://www.amazon.com/Mindstorms-Children-Computers-Powerful-Ideas/dp/0465046746/ref=asap_bc?ie=UTF8) which discusses logo and its goals.
+Logo is a computer programming language, created in 1967 at the (now) MIT Media Lab to explore how programming can help children learn critical thinking and problem solving. One of the creators of Logo, Seymour Papert, wrote [Mindstorms](http://www.amazon.com/Mindstorms-Children-Computers-Powerful-Ideas/dp/0465046746/ref=asap_bc?ie=UTF8) which discusses logo and its goals.
 
-One of the ideas introduced in Logo was "turtle graphics". In logo one can issue commands like `turn left`, `move forward`. These comands are carried out by an on-screen "turtle". Tracing the path of the turtle often produces interesting drawings.
+One of the ideas introduced in Logo was "turtle graphics". In logo one can issue commands like `turn left`, `move forward`. These commands are carried out by an on-screen "turtle". Tracing the path of the turtle often produces interesting drawings.
 
 Turtle robots were also produced, which allowed children a more physical experience. 
 
@@ -29,7 +29,7 @@ Turtle robots were also produced, which allowed children a more physical experie
 
 # Our Simple Turtle
 
-I've created a basic implementation of a turtle, grab [the code on github](https://github.com/jbakse/p5_sketches/tree/master/sketch_turtle_basic).
+I've created a basic implementation of a turtle, grab [the code on Github](https://github.com/jbakse/p5_sketches/tree/master/sketch_turtle_basic).
 
 ## `myTurtle = new Turtle(x, y)`
 turtle constructor, creates a turtle object
@@ -60,7 +60,7 @@ tells the turtle to move without drawing
 tells the turtle to draw a line when it moves
 
 ## `myTurtle.image(image, width, height)`
-draws and image centered on the turtle's current location and alligned with the turtle's rotation
+draws and image centered on the turtle's current location and aligned with the turtle's rotation
 
 
 
@@ -91,7 +91,7 @@ You can use turtle graphics to create drawings with a wide variety of styles, bu
 ```javascript
 myArray = ["apple", "pear"];
 console.log("myArray", myArray);
-myArray.push("bannana");
+myArray.push("banana");
 console.log("myArray", myArray);
 item = myArray.pop();
 console.log("myArray", myArray);
@@ -125,22 +125,43 @@ restores the turtle's state to the top recorded state on the stack
 
 # Break
 
+# Advanced Topic: How the Turtle Object Works 
+## Javascript Prototype-based OOP
 
-# How the Turtle Object Works (Javascript Prototype OOP)
+> Note: This is going to be a brief introduction to OOP, touching on just the basic core concepts. OOP allows for very powerful tools such as inheritance and polymorphism. A good place to start learning more is the [MDN Introduction to Object-Oriented Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
 
-Object Oriented Programming is a programming paradigm in which data and functions are bundled together into objects which represent real-world or conceptual units. In a OOP video game, you might have objects which represent enemies. Enemy objects would contain data such as their `position`, `speed`, and `type()`. They would also contain functions such as `jump()` or `draw()`.
+Object Oriented Programming is a programming paradigm in which data and functions are bundled together. These bundles are called objects, and each object represents an idea in your larger program. Breaking up a program into objects is one way to organize a complex project.
+
+In a OOP video game, you might have objects which represent enemies. Enemy objects would contain data such as their `position`, `speed`, and `strength`. They would also contain functions such as `draw()` or `jump()`.
 
 Our turtle objects have data including `x`, `y`, and `bearing` and functions like `turnLeft()` and `moveForward()`.
 
-In OOP it is common that many objects have a lot in common. 
-Built form a template...
-Many programming languages that support OOP use 
+In OOP it is common that many objects are similar. These similar objects often all behave the same way, but have distinct state or data. In the video game you  may have several enemies that all `draw()` and `jump()` the same way, but each specific enemy has it's own `position` and `speed`. These similar objects are often described as being specific _instances_ of a general _class_.
 
-## Javascript Object
+An object's functions know which instance they belong to and can access the instance's data.
 
-## Object Methods
+<a href="./oop_1.js" class="p5_example show-lab show-lab-link hidden">oop_1.js</a>
 
-## Prototypical Inheritence
+
+> Another Note: Instance and Class are terms that come from class-based OOP. Most mainstream OOP languages are class-based, but Javascript is prototype-based. Because class-based OOP is more common, class-based terms pop up frequently even in javascript reference. [Some have argued](http://javascript.crockford.com/prototypal.html) that even Javascript itself confuses the issue with the `new` operator. And because many programmers learn class-based OOP first, they look for ways to do class-based OOP in Javascript. There are several libraries that make Javascript look more class-based, and [the next/newest version of javascript](http://es6-features.org/#ClassDefinition) adds class features. 
+
+### Prototypes
+
+Since it is common for many objects share behavior, Javascript provides a mechanism to allow this. You can designate an object as the _prototype_ of another object. If you try to access a property of an object, and that object doesn't have that property but it's prototype does, the prototype's property will be used. 
+
+This allows you to specify a template object that contains the shared behavior of a group of similar objects. You can then create many instance objects that share the template object as their prototypes. These instance objects can have their own properties, but will share (inherit) the properties defined in the template object. Usually, objects define their own data/state properties and inherit behavior/method/function properties.
+
+<a href="./oop_2.js" class="p5_example show-lab show-lab-link hidden">oop_1.js</a>
+
+> Note: Since the properties on the template object are only used if the instance object doesn't define them, you can _override_ the behavior of the template for a specific instance object. This leads into the full power of _inheritance_ and _polymorphisim_
+
+In Javascript, there are multiple ways to create objects and set up their prototypes. [Some people suggest using Object.create](http://stackoverflow.com/questions/2709612/using-object-create-instead-of-new), but probably the most _normal_ approach is using a _constructor_ function with the `new` operator.
+
+<a href="./oop_3.js" class="p5_example show-lab show-lab-link hidden">oop_1.js</a>
+
+## How turtle.js works
+
+## [View Code](https://github.com/jbakse/p5_sketches/blob/master/sketch_turtle_basic/turtle.js)
 
 
 # Continued Reading
