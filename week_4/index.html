@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/class_notes/styles/bootswatch.css">
+	<link rel="stylesheet" type="text/css" href="/class_notes/styles/atelier-health.light.css">
+	<link rel="stylesheet" type="text/css" href="/class_notes/styles/main.css">
+	<script type="text/javascript">
+		var base_url = "/class_notes/";
+	</script>
+
+</head>
+<body>
+	<!-- title:  -->
+	<div class="container">
+		<h1>Week 4 - Turtle Graphics, Push and Pop, and Objects</h1>
+<h3>Intro Activity - Cards as Array, Queue, Stack, Set</h3>
+<table>
+<thead>
+<tr><th>Time</th><th>Thing</th></tr>
+</thead>
+<tbody>
+<tr><td>3:50</td><td>Sketch Postings Review</td></tr>
+<tr><td>4:10</td><td>Logo and Turtle Graphics</td></tr>
+<tr><td>4:40</td><td>Push and Pop</td></tr>
+<tr><td>5:30</td><td>Break</td></tr>
+<tr><td>5:40</td><td>Advanced Topic: How the Turtle Object Works</td></tr>
+<tr><td>6:20</td><td>Closing Notes and Assignment</td></tr>
+</tbody>
+</table>
+<h3>Sketch Postings Review</h3>
+<p><a href="http://compform.tumblr.com">Class Sketch Blog</a></p>
+<h1>Logo and Turtle Graphics</h1>
+<p>Logo is a computer programming language, created in 1967 at the (now) MIT Media Lab to explore how programming can help children learn critical thinking and problem solving. One of the creators of Logo, Seymour Papert, wrote <a href="http://www.amazon.com/Mindstorms-Children-Computers-Powerful-Ideas/dp/0465046746/ref=asap_bc?ie=UTF8">Mindstorms</a> which discusses logo and its goals.</p>
+<p>One of the ideas introduced in Logo was &quot;turtle graphics&quot;. In logo one can issue commands like <code>turn left</code>, <code>move forward</code>. These commands are carried out by an on-screen &quot;turtle&quot;. Tracing the path of the turtle often produces interesting drawings.</p>
+<p>Turtle robots were also produced, which allowed children a more physical experience.</p>
+<p><a href="https://en.wikipedia.org/wiki/Logo_(programming_language)">Logo</a>
+<a href="https://en.wikipedia.org/wiki/Turtle_graphics">Turtle Graphics</a></p>
+<h1>Our Simple Turtle</h1>
+<p>I’ve created a basic implementation of a turtle, grab <a href="https://github.com/jbakse/p5_sketches/tree/master/sketch_turtle_basic">the code on Github</a>.</p>
+<h2><code>myTurtle = new Turtle(x, y)</code></h2>
+<p>turtle constructor, creates a turtle object
+takes optional x, y starting coordinates (default is center of sketch)</p>
+<h2><code>myTurtle.moveForward(distance)</code></h2>
+<p>moves the turtle along its current bearing, drawing a line if pen is down</p>
+<h2><code>myTurtle.moveBackward(distance)</code></h2>
+<p>moves the turtle backward from its current bearing, drawing a line if pen is down</p>
+<h2><code>myTurtle.moveTo(x, y)</code></h2>
+<p>instantly transports the turtle to the provided x, y location, drawing a line if pen is down</p>
+<h2><code>myTurtle.turnRight(angleDegrees)</code></h2>
+<p>rotates the turtle’s bearing clockwise by the provided angle in degrees</p>
+<h2><code>myTurtle.turnLeft(angleDegrees)</code></h2>
+<p>rotates the turtle’s bearing counter-clockwise by the provided angle in degrees</p>
+<h2><code>myTurtle.turnTo(angleDegrees)</code></h2>
+<p>changes the turtle’s bearing to the provided angle in degrees</p>
+<h2><code>myTurtle.penUp()</code></h2>
+<p>tells the turtle to move without drawing</p>
+<h2><code>myTurtle.penDown()</code></h2>
+<p>tells the turtle to draw a line when it moves</p>
+<h2><code>myTurtle.image(image, width, height)</code></h2>
+<p>draws and image centered on the turtle’s current location and aligned with the turtle’s rotation</p>
+<h2>Example 1</h2>
+<p><a href="./turtle_basic.js" class="p5_example show-lab show-lab-link hidden">turtle_basic.js</a></p>
+<h2>Example 2</h2>
+<p><a href="./turtle_image.js" class="p5_example show-lab show-lab-link hidden">turtle_image.js</a></p>
+<h1>Notes on the Turtle</h1>
+<p>You can use turtle graphics to create drawings with a wide variety of styles, but turtle graphics lends itself to curvy/spirography drawings naturally. This is largely due to two differences in the way the turtle works vs p5’s <code>line()</code>.</p>
+<ul>
+<li>Positions and angles are relative instead of absolute.</li>
+<li>Lines are specified in terms of angle and distance instead of x and y.</li>
+</ul>
+<h1>Push and Pop</h1>
+<h2><code>myArray.push()</code> and <code>myArray.pop()</code></h2>
+<pre><code class="language-javascript">myArray = [<span class="hljs-string">"apple"</span>, <span class="hljs-string">"pear"</span>];
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"myArray"</span>, myArray);
+myArray.push(<span class="hljs-string">"banana"</span>);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"myArray"</span>, myArray);
+item = myArray.pop();
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"myArray"</span>, myArray);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"item"</span>, item);
+</code></pre>
+<h2>P5 <code>push()</code> and <code>pop()</code></h2>
+<p><a href="./p5_pushpop.js" class="p5_example show-lab show-lab-link hidden">p5_pushpop.js</a></p>
+<p>P5 Reference:<br>
+<a href="http://p5js.org/reference/#/p5/push">push()</a>
+<a href="http://p5js.org/reference/#/p5/pop">pop()</a></p>
+<h1>Turtle, Push, Pop</h1>
+<h2><code>myTurtle.pushState()</code></h2>
+<p>records the turtle’s current state (position, bearing, etc.) to a stack so that changes can be undone easily</p>
+<h2><code>myTurtle.popState()</code></h2>
+<p>restores the turtle’s state to the top recorded state on the stack</p>
+<h2>Turtle w/ Push + Pop</h2>
+<p><a href="./turtle_pushpop.js" class="p5_example show-lab show-lab-link hidden">turtle_pushpop.js</a></p>
+<h2>Turtle Tree</h2>
+<p><a href="./turtle_tree.js" class="p5_example show-lab show-lab-link hidden">turtle_tree.js</a></p>
+<h1>Break</h1>
+<h1>Advanced Topic: How the Turtle Object Works</h1>
+<h2>Javascript Prototype-based OOP</h2>
+<blockquote>
+<p>Note: This is going to be a brief introduction to OOP, touching on just the basic core concepts. OOP allows for very powerful tools such as inheritance and polymorphism. A good place to start learning more is the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript">MDN Introduction to Object-Oriented Javascript</a></p>
+</blockquote>
+<p>Object Oriented Programming is a programming paradigm in which data and functions are bundled together. These bundles are called objects, and each object represents an idea in your larger program. Breaking up a program into objects is one way to organize a complex project.</p>
+<p>In a OOP video game, you might have objects which represent enemies. Enemy objects would contain data such as their <code>position</code>, <code>speed</code>, and <code>strength</code>. They would also contain functions such as <code>draw()</code> or <code>jump()</code>.</p>
+<p>Our turtle objects have data including <code>x</code>, <code>y</code>, and <code>bearing</code> and functions like <code>turnLeft()</code> and <code>moveForward()</code>.</p>
+<p>In OOP it is common that many objects are similar. These similar objects often all behave the same way, but have distinct state or data. In the video game you  may have several enemies that all <code>draw()</code> and <code>jump()</code> the same way, but each specific enemy has it’s own <code>position</code> and <code>speed</code>. These similar objects are often described as being specific <em>instances</em> of a general <em>class</em>.</p>
+<p>An object’s functions know which instance they belong to and can access the instance’s data.</p>
+<p><a href="./oop_1.js" class="p5_example show-lab show-lab-link hidden">oop_1.js</a></p>
+<blockquote>
+<p>Another Note: Instance and Class are terms that come from class-based OOP. Most mainstream OOP languages are class-based, but Javascript is prototype-based. Because class-based OOP is more common, class-based terms pop up frequently even in javascript reference. <a href="http://javascript.crockford.com/prototypal.html">Some have argued</a> that even Javascript itself confuses the issue with the <code>new</code> operator. And because many programmers learn class-based OOP first, they look for ways to do class-based OOP in Javascript. There are several libraries that make Javascript look more class-based, and <a href="http://es6-features.org/#ClassDefinition">the next/newest version of javascript</a> adds class features.</p>
+</blockquote>
+<h3>Prototypes</h3>
+<p>Since it is common for many objects share behavior, Javascript provides a mechanism to allow this. You can designate an object as the <em>prototype</em> of another object. If you try to access a property of an object, and that object doesn’t have that property but it’s prototype does, the prototype’s property will be used.</p>
+<p>This allows you to specify a template object that contains the shared behavior of a group of similar objects. You can then create many instance objects that share the template object as their prototypes. These instance objects can have their own properties, but will share (inherit) the properties defined in the template object. Usually, objects define their own data/state properties and inherit behavior/method/function properties.</p>
+<p><a href="./oop_2.js" class="p5_example show-lab show-lab-link hidden">oop_1.js</a></p>
+<blockquote>
+<p>Note: Since the properties on the template object are only used if the instance object doesn’t define them, you can <em>override</em> the behavior of the template for a specific instance object. This leads into the full power of <em>inheritance</em> and <em>polymorphisim</em></p>
+</blockquote>
+<p>In Javascript, there are multiple ways to create objects and set up their prototypes. <a href="http://stackoverflow.com/questions/2709612/using-object-create-instead-of-new">Some people suggest using Object.create</a>, but probably the most <em>normal</em> approach is using a <em>constructor</em> function with the <code>new</code> operator.</p>
+<p><a href="./oop_3.js" class="p5_example show-lab show-lab-link hidden">oop_1.js</a></p>
+<h2>How turtle.js works</h2>
+<h2><a href="https://github.com/jbakse/p5_sketches/blob/master/sketch_turtle_basic/turtle.js">View Code</a></h2>
+<h1>Continued Reading</h1>
+<p>In these first few weeks we’ve looked at some intermediate topics related to drawing still images in p5. We’ll be moving on to other topics in the coming weeks, but if you want to continue with drawing you might want to check out
+<a href="http://www.amazon.com/Nature-Code-Daniel-Shiffman-ebook/dp/B00BPFT8D4/">The Nature of Code</a> by Daniel Shiffman. Daniel teaches over at  NYU ITP, contributes heavily to Processing and p5.js. The Nature of Code covers a lot of interesting topics with code in Processing. Also check out his <a href="https://www.youtube.com/channel/UCvjgXvBlbQiydffZU7m1_aw">Youtube channel</a>.</p>
+<h1>Random Tip: Chrome Task Manager</h1>
+<p>While you are working you might occassionaly create a script that gets stuck or takes a very long time to execute. This will freeze up the Chrome tab the script is running in. <a href="https://support.google.com/chrome/answer/95672?hl=en">Use the task manager to stop your script</a>.</p>
+<h1>Assigment</h1>
+<p>Create a daily p5.js sketch exploring the topics presented in class. Post an image of your results each day to the class sketch blog.</p>
+<p>For those of you who prefer a little more direction, some optional prompts:</p>
+<p><code>#turtle_plus_random</code> Without random, turtle graphics tend to have a machine-made quality, throwing a little random chance into your moves and turns can make things look more natural.</p>
+<p><code>#image_only</code> Keep the pen up, and do all your drawing using <code>.image</code></p>
+<p><code>#recursive_turtle</code> Try out making a drawing using a recursive function. Try to make something that looks very different from the tree example.</p>
+<h1>Links</h1>
+<ul>
+<li><a href="http://beautifulprogramming.com/">Beautiful Programming</a></li>
+</ul>
+
+	</div>
+	
+	<script type="text/javascript" src="/class_notes/javascript/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="/class_notes/javascript/highlight.pack.js"></script>
+	<script type="text/javascript" src="/class_notes/javascript/p5_example.js"></script>
+	<script type="text/javascript">
+		$( function() {
+			$("table").addClass("table table-bordered");
+		});
+	</script>
+</body>
+</html>
