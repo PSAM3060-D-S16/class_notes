@@ -128,7 +128,15 @@ restores the turtle's state to the top recorded state on the stack
 
 # How the Turtle Object Works (Javascript Prototype OOP)
 
-## A Data Object
+Object Oriented Programming is a programming paradigm in which data and functions are bundled together into objects which represent real-world or conceptual units. In a OOP video game, you might have objects which represent enemies. Enemy objects would contain data such as their `position`, `speed`, and `type()`. They would also contain functions such as `jump()` or `draw()`.
+
+Our turtle objects have data including `x`, `y`, and `bearing` and functions like `turnLeft()` and `moveForward()`.
+
+In OOP it is common that many objects have a lot in common. 
+Built form a template...
+Many programming languages that support OOP use 
+
+## Javascript Object
 
 ## Object Methods
 
