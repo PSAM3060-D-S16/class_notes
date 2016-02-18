@@ -138,7 +138,7 @@ Our turtle objects have data including `x`, `y`, and `bearing` and functions lik
 
 In OOP it is common that many objects are similar. These similar objects often all behave the same way, but have distinct state or data. In the video game you  may have several enemies that all `draw()` and `jump()` the same way, but each specific enemy has it's own `position` and `speed`. These similar objects are often described as being specific _instances_ of a general _class_.
 
-An object's functions know which instance they belong to and can access the instance's data.
+An object's functions know which instance they belong to and can access the instance's data using `this`.
 
 <a href="./oop_1.js" class="p5_example show-lab show-lab-link hidden">oop_1.js</a>
 
@@ -156,6 +156,8 @@ This allows you to specify a template object that contains the shared behavior o
 > Note: Since the properties on the template object are only used if the instance object doesn't define them, you can _override_ the behavior of the template for a specific instance object. This leads into the full power of _inheritance_ and _polymorphisim_
 
 In Javascript, there are multiple ways to create objects and set up their prototypes. [Some people suggest using Object.create](http://stackoverflow.com/questions/2709612/using-object-create-instead-of-new), but probably the most _normal_ approach is using a _constructor_ function with the `new` operator.
+
+Here is what happens when you call a constructor function with the `new` operator. Javascript creates a new, empty object. Javascript sets the prototype of the new object to be the prototype associated with the constructor function. Javascript executes the constructor function, using the new empty object as `this`.
 
 <a href="./oop_3.js" class="p5_example show-lab show-lab-link hidden">oop_1.js</a>
 
