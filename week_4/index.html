@@ -103,7 +103,7 @@ item = myArray.pop();
 <p>In a OOP video game, you might have objects which represent enemies. Enemy objects would contain data such as their <code>position</code>, <code>speed</code>, and <code>strength</code>. They would also contain functions such as <code>draw()</code> or <code>jump()</code>.</p>
 <p>Our turtle objects have data including <code>x</code>, <code>y</code>, and <code>bearing</code> and functions like <code>turnLeft()</code> and <code>moveForward()</code>.</p>
 <p>In OOP it is common that many objects are similar. These similar objects often all behave the same way, but have distinct state or data. In the video game you  may have several enemies that all <code>draw()</code> and <code>jump()</code> the same way, but each specific enemy has it’s own <code>position</code> and <code>speed</code>. These similar objects are often described as being specific <em>instances</em> of a general <em>class</em>.</p>
-<p>An object’s functions know which instance they belong to and can access the instance’s data.</p>
+<p>An object’s functions know which instance they belong to and can access the instance’s data using <code>this</code>.</p>
 <p><a href="./oop_1.js" class="p5_example show-lab show-lab-link hidden">oop_1.js</a></p>
 <blockquote>
 <p>Another Note: Instance and Class are terms that come from class-based OOP. Most mainstream OOP languages are class-based, but Javascript is prototype-based. Because class-based OOP is more common, class-based terms pop up frequently even in javascript reference. <a href="http://javascript.crockford.com/prototypal.html">Some have argued</a> that even Javascript itself confuses the issue with the <code>new</code> operator. And because many programmers learn class-based OOP first, they look for ways to do class-based OOP in Javascript. There are several libraries that make Javascript look more class-based, and <a href="http://es6-features.org/#ClassDefinition">the next/newest version of javascript</a> adds class features.</p>
@@ -116,6 +116,7 @@ item = myArray.pop();
 <p>Note: Since the properties on the template object are only used if the instance object doesn’t define them, you can <em>override</em> the behavior of the template for a specific instance object. This leads into the full power of <em>inheritance</em> and <em>polymorphisim</em></p>
 </blockquote>
 <p>In Javascript, there are multiple ways to create objects and set up their prototypes. <a href="http://stackoverflow.com/questions/2709612/using-object-create-instead-of-new">Some people suggest using Object.create</a>, but probably the most <em>normal</em> approach is using a <em>constructor</em> function with the <code>new</code> operator.</p>
+<p>Here is what happens when you call a constructor function with the <code>new</code> operator. Javascript creates a new, empty object. Javascript sets the prototype of the new object to be the prototype associated with the constructor function. Javascript executes the constructor function, using the new empty object as <code>this</code>.</p>
 <p><a href="./oop_3.js" class="p5_example show-lab show-lab-link hidden">oop_1.js</a></p>
 <h2>How turtle.js works</h2>
 <h2><a href="https://github.com/jbakse/p5_sketches/blob/master/sketch_turtle_basic/turtle.js">View Code</a></h2>
