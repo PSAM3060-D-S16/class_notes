@@ -8,6 +8,8 @@
 
 <h1>I am <br/>Justin Bakse</h1>
 
+<div id="intro"></div>
+
 ![jbakse00.jpg](mcad/jbakse00.jpg)
 ![jbakse01.jpg](mcad/jbakse01.jpg)
 ![jbakse02.jpg](mcad/jbakse02.jpg)
@@ -33,9 +35,20 @@ Those expereinces changed how I look at things, and how I interpret that piece. 
 
 # I am an Interaction Designer, Creative Coder, and Teacher
 
+### Teaching is Important
+### You Can't Teach (all) the Skills Students Will Need
+### Good Lessons Add, Better Lessons Multiply
+### Practice is the Most Important Thing
+### The Best Teachers Practice and Learn Along with Their Students
+### Design Education Should Stress Higher-Order Design
+
+<div id="interaction-designer"></div>
+
 ## Interaction Designer
 
 ### I studied sculpture, interactive media, and a bit of print making at the Minneapolis College of Art and Design. I studied design and installation art in the 2D Design department at the Cranbrook Academy of Art. <!-- [One A Day]((http://jbakse.netdone.com/)) -->
+
+
 
 ![5x5x5.jpg](mcad/5x5x5.jpg)
 ![jump.jpg](cranbrook/jump.jpg)
@@ -70,17 +83,24 @@ Those expereinces changed how I look at things, and how I interpret that piece. 
 ![ifbi.jpg](bns/ifbi.jpg)
 
 
+<div id="creative-coder"></div>
+
 ## Creative Coder
 
 ### I design and build machines and games and toys and tools—all things that can be used and experienced by others. Computer programming is a primary media in much of my work. 
 
-![the_essay_project.jpg](creative_coder/the_essay_project.jpg)
-![battle.png](creative_coder/battle.png)
+> B **You Can't Teach (all) the Skills Students Will Need**
+
 ![reich.jpg](creative_coder/reich.jpg)
+![battle.png](creative_coder/battle.png)
+![the_essay_project.jpg](creative_coder/the_essay_project.jpg)
 ![greg.jpg](creative_coder/greg.jpg)
 ![mds.png](creative_coder/mds.png)
 ![mult_touch_string.jpg](creative_coder/mult_touch_string.jpg)
 ![multitouch.jpg](creative_coder/multitouch.jpg)
+
+> E **The Best Teachers Practice and Learn Along with Their Students**
+
 ![markov_map_1.png](creative_coder/markov_map_1.png)
 ![type_1.jpg](creative_coder/type_1.jpg)
 ![drawing.jpg](creative_coder/drawing.jpg)
@@ -89,13 +109,20 @@ Those expereinces changed how I look at things, and how I interpret that piece. 
 ![top_2.jpg](creative_coder/top_2.jpg)
 ![village_1.jpg](creative_coder/village_1.jpg)
 
+<div id="teacher"></div>
 
 ## And Teacher
 
 ### My teaching topics focus on the intersection of technology, art, and design, including courses on creative coding, physical computing, data visualization, and computational methods of design.
 
+
 ### Creative Computing (Fall 2015)
 ### Multiple Students - Assignment One
+
+> F **Design Education Should Stress Higher-Order Design**
+
+> C **Good Lessons Add, Better Lessons Multiply**
+
 ![multi.png](student_slides/multi.png)
 
 ### Data, Design, Code (Sprint 2014)
@@ -108,8 +135,13 @@ Those expereinces changed how I look at things, and how I interpret that piece. 
 ### Vanshika Swaika
 ![vanshika_swaika_dexter.jpg](student_slides/vanshika_swaika_dexter.jpg)
 
+
+
 ### Computational Form (Spring 2016)
 ### Adomas Bruzga
+
+> D **Practice is the Most Important Thing**
+
 ![adomas_bruzga_space.jpg](student_slides/adomas_bruzga_space.jpg)
 ### Brinna Thomsen
 ![brinna_thomsen_scribble.png](student_slides/brinna_thomsen_scribble.png)
@@ -121,7 +153,11 @@ Those expereinces changed how I look at things, and how I interpret that piece. 
 ![peter_toh_slit.png](student_slides/peter_toh_slit.png)
 
 
+<div id="teaching-philosophy"></div>
+
 # Teaching Philosophy
+
+
 
 ## Teaching is Important
 ### Only when one person is willing to share their knowledge with another, can society be advanced.
@@ -142,7 +178,7 @@ Those expereinces changed how I look at things, and how I interpret that piece. 
 
 
 ## The Best Teachers Practice and Learn Along with Their Students
-### I believe that teaching is most effective when teachers focus on subjects that they have an eager interest in, and that the best teachers continue to practice and learn along with their students.
+### I believe that teaching is most effective when teachers focus on subjects that they have an eager interest in, and that the best teachers continue to practice and learn along with their students. It may go without saying, but just in case, teachers must also have an eager interest in teaching.
 
 ## Design Education Should Stress Higher-Order Design
 ### Designers need to be able to create good design. Designers must also be able to create systems that can themselves create good design. Identity designers have long needed to create systems that consider not just immediate needs, but future needs as well. As more communication design moves to digital media, and as digital media becomes more powerful and flexible, design systems thinking becomes more important.
