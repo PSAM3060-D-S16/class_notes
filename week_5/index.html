@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/class_notes/styles/bootswatch.css">
+	<link rel="stylesheet" type="text/css" href="/class_notes/styles/atelier-health.light.css">
+	<link rel="stylesheet" type="text/css" href="/class_notes/styles/main.css">
+	<script type="text/javascript">
+		var base_url = "/class_notes/";
+	</script>
+
+</head>
+<body>
+	<!-- title:  -->
+	<div class="container">
+		<h1>Week 5 - Vector Graphics</h1>
+<h1>Notes on Vector Graphics</h1>
+<p>Vector graphics represent images as a collection of styled shapes and paths. Vector graphics are well suited to highly graphic applications such as type, logos, and some illustration styles. They are very poorly suited for photographic images.</p>
+<ul>
+<li>Much Smaller File Sizes</li>
+<li>Can be rasterized at any resolution, while preserving image sharpness</li>
+<li>Shape data can be understood and used by pen ploters, laser cutters, CNC routers, and other machines</li>
+<li>Shape data can be restyled and colored easily</li>
+<li>Shape data can be scaled, warped, and distorted without loss of quality</li>
+</ul>
+<p>Procedurely generating vector data instead of rasterized data allow you to further work with the data in a program like Adobe Illustrator. Post-processing your program output in Illustrator can make some types of designs much easier to create than working working purely with code or manually.</p>
+<p><strong>Note: This week’s homework includes a special requirement: create a large-scale print or laser-cut at least one of your sketches.</strong></p>
+<h1>Using p5.svg.js</h1>
+<p>The <a href="https://github.com/zenozeng/p5.js-svg">p5.svg.js</a> by Zeno Zeng library extends p5 by making it draw to an SVG element instead of a canvas element. When you call <code>save()</code> the SVG data will be downloaded as an <code>.svg</code> file which can be opened and edited in Adobe Illustrator. The Github README.md file conains links to a <a href="https://github.com/zenozeng/p5.js-svg/blob/master/doc/getting-started.md">short tutorial</a> and <a href="http://zenozeng.github.io/p5.js-svg/examples/">examples</a>.</p>
+<p>I have created a basic sketch as template.
+<a href="https://github.com/jbakse/p5_sketches/tree/master/sketch_basic_svg">Sketch Basic SVG</a></p>
+<p>Notes:</p>
+<ul>
+<li>I ran into an issue when using p5.svg.js with the latest p5.js. The sketch template includes a slightly older revision of the p5.js library.</li>
+<li>The default resolution in p5 is 1 unit = 1 pixel = 1/72 inch. You can effectively change this with the <code>scale()</code> command.</li>
+<li>In addition to their normal roll <code>push()</code> and <code>pop()</code> can be used to group shapes in your output svg.</li>
+</ul>
+<h1>Adobe Extend Script</h1>
+<h2>Setting up ExtendScript</h2>
+<ul>
+<li>Install Adobe Illustrator</li>
+<li>Install Adobe ExtendScript Toolkit</li>
+<li>Download the class <a href="https://github.com/PSAM3060-D-S16/extendscript_sketch_template">extendscript_sketch_template .zip</a></li>
+<li>Extract the Zip</li>
+<li>Rename the folder as you like and put it where it belongs (depending on how you organize files).</li>
+<li>I suggest creating a new repo for your extend script sketches, and adding the examples in the template repo as starting points.</li>
+</ul>
+<h2>ExtendScript Hello World</h2>
+<ul>
+<li>Open Adobe Illustrator</li>
+<li>Create a new, empty document</li>
+<li>Open Adobe ExtendScript Toolkit</li>
+<li>In ExtendScript Toolkit select Adobe Illustrator from the pulldown menu at the top left of the main window</li>
+<li>In ExtendScript Toolkit open illustrator_basic/basic.jsx</li>
+<li>Click the Play button to run the script</li>
+</ul>
+<h2>ExtendScript Documentation</h2>
+<ul>
+<li><p><a href="http://www.adobe.com/devnet/scripting.html">Adobe Scripting Center</a></p></li>
+<li><p><a href="http://www.adobe.com/devnet/illustrator/scripting.html">Illustrator Scripting PDFS</a></p>
+<ul>
+<li>Adobe Illustrator CC 2015 Scripting Guide</li>
+<li>Adobe Illustrator CC 2015 Reference: JavaScript (PDF, 1.0M)</li>
+</ul></li>
+<li><p><a href="http://yearbook.github.io/esdocs/#/Javascript/$">ExtendScript API Docs as Webpage</a> Thanks to wridgers.</p></li>
+<li><p><a href="https://github.com/jtnimoy/scripting-for-illustrator-tutorial">A nice Tutorial</a> Thanks to jtnimoy.</p></li>
+</ul>
+<h1>Resources</h1>
+<p><a href="https://atom.io/packages/language-javascript-jsx">Atom JSX Language Package</a>
+Adds syntax coloring for .jsx files. Also you can use set Edit &gt; Select Grammar to tell atom your .jsx files are Javascript.</p>
+<h1>Homework</h1>
+<p>Create a daily sketch exploring the topics presented in class. Post an image of your results each day to the class sketch blog.</p>
+<p><strong>An extra requirement this week:</strong>
+Create a large-scale print or laser-cut of at least one of your sketches this week.</p>
+
+	</div>
+	
+	<script type="text/javascript" src="/class_notes/javascript/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="/class_notes/javascript/highlight.pack.js"></script>
+	<script type="text/javascript" src="/class_notes/javascript/p5_example.js"></script>
+	<script type="text/javascript">
+		$( function() {
+			$("table").addClass("table table-bordered");
+		});
+	</script>
+</body>
+</html>
