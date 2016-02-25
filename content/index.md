@@ -23,7 +23,7 @@
 | Week 2 Feb 5 | Generating Randomized Images | Javascript + P5 | [class notes](week_2)
 | Week 3 Feb 12 | Working with Pixels | Javascript + P5 | [class notes](week_3)
 | Week 4 Feb 19 | Turtle Graphics and Drawing Machines | Javascript + P5 | [class notes](week_4)
-| Week 5 Feb 26 | Creating Vector Data | Adobe Scripting | [class notes](#)
+| Week 5 Feb 26 | Creating Vector Data | Adobe Scripting | [class notes](week_5)
 | | **Video** |
 | Week 6 | Generating Animations | Javascript + P5 | [class notes](#)
 | Week 7 | Manipulating Live Video | Quartz Composer | [class notes](#)
