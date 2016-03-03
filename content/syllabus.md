@@ -51,6 +51,15 @@ The following outlines the main topics to be presented in each class. This may b
 | Week 15 | Final Critique | 
 
 
+## Homework
+
+Homework is the most important part of this class. If you do the homework regularly and keep up, you will do well. This course involves a new way of thinking and multiple new tools and languages. To learn any language or tool, you must use it. Homework is where you will apply what we discuss discuss in class.
+
+For the first 11 weeks of the class the homework assignments will involve daily postings of sketches, project progress, and research. You are expected to post at least 4 sketches exploring the weekly topics to the class blog each week. You must make an effort to post work throughout the week, late work will not be accepted.
+
+The last four weeks of the semester you will complete more developed project. The nature of your project is up to you (subject to instrctor approval), but should relate to the core concepts explored in this class. Your final project will be due before the beginning of the last class of the semester.
+
+
 
 
 
@@ -145,11 +154,7 @@ Each student must have a Github account. We will use Github to turn in and host 
 ## Tumblr
 Each student must have a Tumblr account. We will use Tumblr to share daily exercises.
 
-## Homework
 
-Homework is the most important part of this class. If you do the homework regularly and keep up, you will do well. This course involves a new way of thinking and multiple new tools and languages. To learn any language or tool, you must use it. A lot. And homework is where you will apply what we discuss discuss in class.
-
-For the first 10 weeks of the class the homework assignments will involve daily postings of sketches, project progress, and research. You must make an effort to post work throughout the week, late work will not be accepted. Be sure to commit your work to you Github account frequently. 
 
 
 ## Office Hours
