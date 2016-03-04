@@ -38,59 +38,54 @@ function drawScroll(s) {
 	console.log("scroll", s);
 	background(100);
 	
+	var intro = $("#intro").offset().top;
+	var interaction_designer = $("#interaction-designer").offset().top;
+	var creative_coder = $("#creative-coder").offset().top;
+	var teacher = $("#teacher").offset().top;
+	var teaching_philosophy = $("#teaching-philosophy").offset().top;
 
 
 	itemSize = 100;
 
 
-	if (s < 800) {
-		//intro
+	if (s < intro) {
 		background(colors.green);
 		fill(colors.pink);
-		itemSize = map(s, 0, 800, 0, 1);
+		itemSize = map(s, 0, intro, 0, 1);
 		drawPattern(itemSize);
 	}
 
 
-	else if (s < 6224) {
-		//intro
+	else if (s < interaction_designer) {
 		background(colors.pink);
 		fill(colors.blue);
-		itemSize = map(s, 6224 - 1000, 6224, 0, 1);
+		itemSize = map(s, interaction_designer - 1000, interaction_designer, 0, 1);
 		drawPattern(itemSize);
 	}
 
-	else if (s < 28217) {
-		// interaction designer
+	else if (s < creative_coder) {
 		background(colors.blue);
 		fill(colors.pink);
-
-		itemSize = map(s, 28217 - 1000, 28217, 0, 1);
+		itemSize = map(s, creative_coder - 1000, creative_coder, 0, 1);
 		drawPattern(itemSize);
 	}
 
-	else if (s < 39538) {
-		//creative coder
-
+	else if (s < teacher) {
 		background(colors.pink);
 		fill(colors.green);
-
-		itemSize = map(s, 39538 - 1000, 39538, 0, 1);
+		itemSize = map(s, teacher - 1000, teacher, 0, 1);
 		drawPattern(itemSize);
 	}
 
-	else if (s < 51851) {
-		//teacher
-
+	else if (s < teaching_philosophy) {
 		background(colors.green);
 		fill(colors.drab);
-
-		itemSize = map(s, 51851 - 1000, 51851, 0, 1);
+		itemSize = map(s, teaching_philosophy - 1000, teaching_philosophy, 0, 1);
 		drawPattern(itemSize);
 	}
+	
 	else {
 		background(colors.drab);
-		
 	}
 
 
