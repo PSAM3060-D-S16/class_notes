@@ -25,7 +25,7 @@
 | Week 4 Feb 19 | Turtle Graphics and Drawing Machines | Javascript + P5 | [class notes](week_4)
 | Week 5 Feb 26 | Creating Vector Data | Adobe Scripting | [class notes](week_5)
 | | **Video** |
-| Week 6 | Generating Animations | Javascript + P5 | [class notes](#)
+| Week 6 | Generating Animations | Javascript + P5 | [class notes](week_6)
 | Week 7 | Manipulating Live Video | Quartz Composer | [class notes](#)
 | | **Sound** |
 | Week 8 | Visualizing Sound | Quartz Composer | [class notes](#)
