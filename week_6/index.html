@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/class_notes/styles/bootswatch.css">
+	<link rel="stylesheet" type="text/css" href="/class_notes/styles/atelier-health.light.css">
+	<link rel="stylesheet" type="text/css" href="/class_notes/styles/main.css">
+	<script type="text/javascript">
+		var base_url = "/class_notes/";
+	</script>
+
+</head>
+<body>
+	<!-- title:  -->
+	<div class="container">
+		<h1>Week 5 - Animations</h1>
+<p><a href="https://www.youtube.com/watch?v=H9V-LShEoCc">Beyond the Mind’s Eye</a></p>
+<h2>Thoughts on Animation</h2>
+<h2>Real-time vs. Prerendered</h2>
+<ul>
+<li>Real-time doesn’t mean <em>fast</em>.</li>
+<li>Real-time does mean <em>created at the time it is used</em>.</li>
+<li>Real-time also means <em>clock time</em>.</li>
+<li>Real-time has multiple meanings. So, fine, sometimes it does mean fast.</li>
+</ul>
+<p>In real-time rendering, each frame of animation is rendered just before it is displayed on screen. The key advantage of this is that the animation can be influenced by user input. To achieve this each frame must be rendered in the time between frames. In some modern graphics engines, multiple frames are in various phases of rendering at the same time.</p>
+<h3><code>millis()</code></h3>
+<p>In real-time rendering it is common that the time between frames might vary, or that some frames might be dropped. Because of this it is best to use a real-time clock functions to keep track of the animation time. The current frame number is unreliable for timing.</p>
+<p><a href="./millis.js" class="p5_example show-lab show-lab-link hidden">millis.js</a></p>
+<h3><code>frameCount</code></h3>
+<p>When pre-rendering each frame may take much longer than the animation frame rate to render, and the render times for each frame may vary drastically. However, since the resulting frames will be played back at a stable frame rate, it doesn’t matter how long they take to render. In this case, using the frame number for timings is the best choice.</p>
+<p><a href="./framecount.js" class="p5_example show-lab show-lab-link hidden">millis.js</a></p>
+<h2>Parametric + Deterministic</h2>
+<h3><code>randomSeed()</code></h3>
+<p><a href="./randomseed.js" class="p5_example show-lab show-lab-link hidden">millis.js</a></p>
+<h2>Exporting Frames</h2>
+<p>The <code>save()</code> function and its friends will save and download your current canvas frame as an image. <strong>You will want to empty out your downloads folder first.</strong></p>
+<blockquote>
+<p><a href="http://p5js.org/reference/">SHARPEN YOUR AXE</a></p>
+</blockquote>
+<h3><code>save()</code></h3>
+<p><a href="http://p5js.org/reference/#/p5/save">save()</a></p>
+<h3><code>saveCanvas()</code></h3>
+<p><a href="http://p5js.org/reference/#/p5/saveCanvas">saveCanvas()</a></p>
+<h3><code>saveFrames()</code></h3>
+<p><a href="http://p5js.org/reference/#/p5/saveFrames">saveFrames()</a></p>
+<p><a href="./save.js" class="p5_example show-lab show-lab-link hidden">save.js</a></p>
+<h2>Stitching Frames</h2>
+<p>How I usually do it: <a href="https://support.apple.com/kb/DL923?locale=en_US">Quicktime 7</a></p>
+<p>How I also sometimes do it: <a href="https://www.ffmpeg.org/">FFmpeg</a></p>
+<p>Other options (some out of date): <a href="http://www.andrewnoske.com/wiki/Convert_an_image_sequence_to_a_movie">Convert an image sequence to a movie</a></p>
+<p>How We will do it (and I might start doing it this way): Photoshop</p>
+<ul>
+<li>Open Photoshop</li>
+<li>Choose <code>File</code> &gt; <code>Open</code></li>
+<li>Click on the first file in your sequence</li>
+<li>Check `Image Sequence</li>
+<li>From the Timeline dropdown menu choose <code>Render Video...</code></li>
+<li>Adjust settings</li>
+<li>Click <code>Render</code></li>
+</ul>
+<!-- <a href="./save_2.js" class="p5_example show-lab show-lab-link hidden">save_2.js</a> -->
+<h2>Periodic Functions</h2>
+<h3>Using Modulo <code>%</code></h3>
+<p><a href="./modulo.js" class="p5_example show-lab show-lab-link hidden">modulo.js</a></p>
+<p><a href="./modulo_square.js" class="p5_example show-lab show-lab-link hidden">modulo_square.js</a></p>
+<h3>Using Sine <code>sin()</code></h3>
+<ul>
+<li><p>The <code>sin()</code> function returns the trigonometric sine of the given angle in radians.</p></li>
+<li><p>Given an angle in a right triangle, the sine function provides the ratio of the opposite side to the hypotenuse.</p></li>
+<li><p>This ratio ranges from -1 to 1 in a nice, graceful curve.</p></li>
+<li><p>Multiplying the input value will change the period.</p></li>
+<li><p>Adding to the input value will change the phase.</p></li>
+<li><p>Multiplying the output value will change the amplitude.</p></li>
+<li><p>Adding to the output value will change the vertical shift.</p></li>
+</ul>
+<p><a href="https://en.wikipedia.org/wiki/Sine">Sine</a></p>
+<p><a href="./sin.js" class="p5_example show-lab show-lab-link hidden">sin.js</a></p>
+<h3>LerpColor()</h3>
+<p><a href="http://p5js.org/reference/#/p5/lerpColor"><code>LerpColor()</code> is handy</a></p>
+<h1>Homework</h1>
+<p>Create a daily sketch exploring the topics presented in class. Post an image of your results each day to the class sketch blog.</p>
+
+	</div>
+	
+	<script type="text/javascript" src="/class_notes/javascript/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="/class_notes/javascript/highlight.pack.js"></script>
+	<script type="text/javascript" src="/class_notes/javascript/p5_example.js"></script>
+	<script type="text/javascript">
+		$( function() {
+			$("table").addClass("table table-bordered");
+		});
+	</script>
+</body>
+</html>
