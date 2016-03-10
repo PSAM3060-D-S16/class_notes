@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/class_notes/styles/bootswatch.css">
+	<link rel="stylesheet" type="text/css" href="/class_notes/styles/atelier-health.light.css">
+	<link rel="stylesheet" type="text/css" href="/class_notes/styles/main.css">
+	<script type="text/javascript">
+		var base_url = "/class_notes/";
+	</script>
+
+</head>
+<body>
+	<!-- title:  -->
+	<div class="container">
+		<h1>Week 7 - Realtime Video Processing &amp; Quartz Composer</h1>
+<p>Intro Video: <a href="https://www.youtube.com/watch?v=-P28LKWTzrI">Mythbusters Painting Demo</a></p>
+<h1>Quartz Composer</h1>
+<blockquote>
+<p>Quartz Composer is a development tool for processing and rendering graphical data. Its visual programming environment lets you develop graphic processing modules, called compositions, without writing a single line of code.</p>
+</blockquote>
+<p>— Quartz Composer User Guide</p>
+<p>Quartz composer is a node based, visual programming environment. This style of programming is sometimes called <a href="https://en.wikipedia.org/wiki/Dataflow_programming">dataflow programming</a>. Related programming environments include Max/MSP, Pure Data, and Nodebox 3. Dataflow interfaces are also found in non-realtime graphics and audio platforms like Nuke, Maya, and Reason.</p>
+<h2>Download Quartz Composer</h2>
+<p>Quartz Composer is part of the “Graphics Tools for Xcode 7.2” bundle. You can download it here:</p>
+<p><a href="https://developer.apple.com/downloads/">https://developer.apple.com/downloads/</a></p>
+<p>You will need to sign in with an Apple ID account, but you should not need to purchase a develoepr account. Despite the name, you should not need Xcode 7.2 either.</p>
+<p><strong>Note: Quartz composer and many example files are older and not “signed” by apple. You may need to right click the application or example and choose “open” from the contextual menu to open them on your computer.</strong></p>
+<h2>Overview</h2>
+<p><strong>SAVE YOUR WORK FREQUENTLY!</strong></p>
+<p><a href="https://vimeo.com/88468610">Jay Thrash: 4 Minute Guide to Quartz Composer</a></p>
+<h2>Some Useful Patches</h2>
+<h3>Source &gt; Video Input</h3>
+<h3>Render &gt; Billboard</h3>
+<h3>Image &gt; Filter &gt; Color Controlls</h3>
+<h3>Generator &gt; Random + Image Crop</h3>
+<h3>Animation &gt; Wave Generator</h3>
+<h3>Custom &gt; Composite</h3>
+<h2>Programming Patches</h2>
+<h3>Program &gt; JavaScript</h3>
+<ul>
+<li>Must return an object. The object properties will be the outputs.</li>
+<li>Must declare inputs and outputs with types (this is non-standard Javascript).</li>
+<li>Your value types must match what you declare, and output types must match inputs of the patch you connect too.</li>
+<li>Javacript runs when an input changes. You’ll need to connect up an input (like Patch Time) if you want your code to rerun.</li>
+</ul>
+<h3>Program &gt; Core Image Filter</h3>
+<ul>
+<li>Allows you to program a custom image data filter using a Subset of GLSL.</li>
+<li>This is fairly tricky territory, that we didn’t cover in class.</li>
+<li>Feel free to try this at home, but you don’t have to.</li>
+</ul>
+<h2>Reference</h2>
+<p>** READ THE TIPS SECTION OF THE LAUNCH WINDOW! **</p>
+<p><a href="https://developer.apple.com/library/mac/documentation/GraphicsImaging/Conceptual/QuartzComposerUserGuide/qc_intro/qc_intro.html">Quartz Composer User Guide</a></p>
+<p><a href="http://kineme.net/wiki/UsingQuartzComposer">Kineme’s Guide</a></p>
+<h2>Examples</h2>
+<p>You can find some Quarz Composer compositions and patches on-line. Unfortunately, I’ve found many to be broken or dead ends.</p>
+<p>You will find some examples linked to from within the Quartz Composer app itself.</p>
+<p>You can also find some hidden in the Application by selecting its icon in the Finder, right clicking to open the contextual menu, and selected “Show Package Contents”</p>
+<!-- Many more are available here (Enter "Quartz Composer" in the search field): https://developer.apple.com/library/prerelease/mac/navigation/ -->
+<h1>Homework</h1>
+<ul>
+<li>Create a daily sketch exploring the topics presented in class. Post an image or video of your results each day to the class sketch blog.</li>
+<li>You may want to consider starting by reading through the Quartz Composer User Guide (linked above), and completing the included tutorial.</li>
+<li>If you would like to explore other data-flow applications this week, go ahead. Please include a link to the tool you use in your posts. Remember to explore, so don’t do your work in PD this week if you already know PD pretty well.</li>
+</ul>
+<h2>Links</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Quartz_Composer">Wikipedia: QC Overview</a></li>
+<li><a href="http://facebook.github.io/origami/tutorials/">Facebook: Orgami</a></li>
+<li><a href="https://www.youtube.com/watch?v=rtgGol-I4gA">Pure Data Hello World Video Tutorials</a></li>
+</ul>
+
+	</div>
+	
+	<script type="text/javascript" src="/class_notes/javascript/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="/class_notes/javascript/highlight.pack.js"></script>
+	<script type="text/javascript" src="/class_notes/javascript/p5_example.js"></script>
+	<script type="text/javascript">
+		$( function() {
+			$("table").addClass("table table-bordered");
+		});
+	</script>
+</body>
+</html>
