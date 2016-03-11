@@ -2,6 +2,8 @@
 
 Intro Video: [Mythbusters Painting Demo](https://www.youtube.com/watch?v=-P28LKWTzrI)
 
+## Mid-semester Eval and Withdraw
+
 # Quartz Composer
 
 > Quartz Composer is a development tool for processing and rendering graphical data. Its visual programming environment lets you develop graphic processing modules, called compositions, without writing a single line of code.
