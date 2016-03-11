@@ -4,6 +4,8 @@ Intro Video: [Mythbusters Painting Demo](https://www.youtube.com/watch?v=-P28LKW
 
 ## Mid-semester Eval and Withdraw
 
+
+
 # Why?
 
 - Exposure to dataflow programming style.
@@ -48,6 +50,8 @@ You will need to sign in with an Apple ID account, but you should not need to pu
 ### Animation > Wave Generator
 
 ### Custom > Composite
+
+### Evironment > Iterator + Iterator Variables
 
 ## Programming Patches
 
