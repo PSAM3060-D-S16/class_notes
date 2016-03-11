@@ -4,6 +4,13 @@ Intro Video: [Mythbusters Painting Demo](https://www.youtube.com/watch?v=-P28LKW
 
 ## Mid-semester Eval and Withdraw
 
+# Why?
+
+- Exposure to dataflow programming style.
+- New lens for looking at programming.
+- Learn how to approach a new programming environment.
+- Further explore computational aesthetic.
+
 # Quartz Composer
 
 > Quartz Composer is a development tool for processing and rendering graphical data. Its visual programming environment lets you develop graphic processing modules, called compositions, without writing a single line of code.
@@ -86,6 +93,13 @@ You can also find some hidden in the Application by selecting its icon in the Fi
 - You may want to consider starting by reading through the Quartz Composer User Guide (linked above), and completing the included tutorial.
 - If you would like to explore other data-flow applications this week, go ahead. Please include a link to the tool you use in your posts. Remember to explore, so don't do your work in PD this week if you already know PD pretty well.
 
+
+# Sound Unit
+
+- Visualization
+- Audio Sythesis
+- Music Generation
+- Languages
 
 ## Links
 
