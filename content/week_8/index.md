@@ -1,6 +1,6 @@
 # Week 4 - Visualizing Sound
 Pitchforks, Musical Instrument, LED Light Source (Projector)
-
+- [Piano](http://qiao.github.io/euphony/#15)
 
 - [ESD Safety](https://www.youtube.com/watch?v=RtlYi1yLTVQ)
 - [IR Thermal Camera](https://www.youtube.com/watch?v=1DiqL8iFD8g)
@@ -180,18 +180,36 @@ Even two perfect microphones, recordings, and speakers can do a pretty good job 
 
 # Additive Synthesis
 
-- All pitched tones can be created by adding sinwaves together.
+- All pitched tone shapes can be created by adding sine waves of different frequencies, phases, and amplitudes.
+- Fundamental and Harmonics/Overtones (whole number multiples of the fundamental)
 - Square wave, triangle wave, sawtooth wave
 - The tone of a guitar, or oboe, or triangle
 
 - By controlling the envolope of these tones we can create a huge range of sounds.
-
+- [Additive Synthesis Web Demo](http://meettechniek.info/additional/additive-synthesis.html)
 - [Wikipedia Additive Synthesis](https://en.wikipedia.org/wiki/Additive_synthesis)
 - [My Notes on Additive Synthesis](http://jbakse.github.io/comp_demos/additive_synthesis/)
 
-# FFT
+# The Fourier transform
+
+- Translates a function from the time domain to frequency domain.
+- Determines how strongly each frequency contributes to the sound.
+- Results in an array of frequency values as long as the input source.
+- The first value coresponds to the wavelength of the input.
+- The remaing values represent frequencies at integer multiples of the first.
+- The algorithm for quickly performing a Fourier transform is called the Fast Forier Transform, or FFT
 
 
+- [Wikipedia: FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform)
+
+# P5 + FFT
+
+[P5 FFT Reference](http://p5js.org/reference/#/p5.FFT)
+[Class Example Code](https://github.com/jbakse/p5_sketches/tree/master/sketch_sound_fft)
+
+# QC + FFT
+
+[Class Example Composition](./QC_FFT.zip)
 
 
 # Links
