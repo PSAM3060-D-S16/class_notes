@@ -28,7 +28,7 @@
 | Week 6 | Generating Animations | Javascript + P5 | [class notes](week_6)
 | Week 7 | Manipulating Live Video | Quartz Composer | [class notes](week_7)
 | | **Sound** |
-| Week 8 | Visualizing Sound | Quartz Composer | [class notes](#)
+| Week 8 | Visualizing Sound | Quartz Composer | [class notes](week_8)
 | Week 9 | Generating Sound | TBD | [class notes](#)
 | | **Miscellanea** |
 | Week 10 | Generating Text | Javascript | [class notes](#)
