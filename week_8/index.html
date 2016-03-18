@@ -16,10 +16,11 @@
 		<h1>Week 4 - Visualizing Sound</h1>
 <p>Pitchforks, Musical Instrument, LED Light Source (Projector)</p>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=RtlYi1yLTVQ">ESD Safety</a></li>
-<li><a href="https://www.youtube.com/watch?v=1DiqL8iFD8g">IR Thermal Camera</a></li>
-<li><a href="https://www.youtube.com/watch?v=o9BqrSAHbTc">Ultraviolet Camera</a></li>
-<li><a href="https://www.youtube.com/watch?v=muCPjK4nGY4">Speaking Piano</a></li>
+<li><p><a href="http://qiao.github.io/euphony/#15">Piano</a></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=RtlYi1yLTVQ">ESD Safety</a></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=1DiqL8iFD8g">IR Thermal Camera</a></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=o9BqrSAHbTc">Ultraviolet Camera</a></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=muCPjK4nGY4">Speaking Piano</a></p></li>
 </ul>
 <h1>Computers, Humans, Physics</h1>
 <ul>
@@ -141,14 +142,32 @@ Listen to one person in noisy room, or to a specific instrument in a symphony.</
 </ul>
 <h1>Additive Synthesis</h1>
 <ul>
-<li><p>All pitched tones can be created by adding sinwaves together.</p></li>
+<li><p>All pitched tone shapes can be created by adding sine waves of different frequencies, phases, and amplitudes.</p></li>
+<li><p>Fundamental and Harmonics/Overtones (whole number multiples of the fundamental)</p></li>
 <li><p>Square wave, triangle wave, sawtooth wave</p></li>
 <li><p>The tone of a guitar, or oboe, or triangle</p></li>
 <li><p>By controlling the envolope of these tones we can create a huge range of sounds.</p></li>
+<li><p><a href="http://meettechniek.info/additional/additive-synthesis.html">Additive Synthesis Web Demo</a></p></li>
 <li><p><a href="https://en.wikipedia.org/wiki/Additive_synthesis">Wikipedia Additive Synthesis</a></p></li>
 <li><p><a href="http://jbakse.github.io/comp_demos/additive_synthesis/">My Notes on Additive Synthesis</a></p></li>
 </ul>
-<h1>FFT</h1>
+<h1>The Fourier transform</h1>
+<ul>
+<li>Translates a function from the time domain to frequency domain.</li>
+<li>Determines how strongly each frequency contributes to the sound.</li>
+<li>Results in an array of frequency values as long as the input source.</li>
+<li>The first value coresponds to the wavelength of the input.</li>
+<li>The remaing values represent frequencies at integer multiples of the first.</li>
+<li>The algorithm for quickly performing a Fourier transform is called the Fast Forier Transform, or FFT</li>
+</ul>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">Wikipedia: FFT</a></li>
+</ul>
+<h1>P5 + FFT</h1>
+<p><a href="http://p5js.org/reference/#/p5.FFT">P5 FFT Reference</a>
+<a href="https://github.com/jbakse/p5_sketches/tree/master/sketch_sound_fft">Class Example Code</a></p>
+<h1>QC + FFT</h1>
+<p><a href="./QC_FFT.zip">Class Example Composition</a></p>
 <h1>Links</h1>
 <p><a href="http://www.thermal.com/">Thermal</a>
 <a href="http://www.photovideoedu.com/Learn/Articles/digital-infrared-photography-practical-aspects.aspx">Infrared Photography</a></p>
