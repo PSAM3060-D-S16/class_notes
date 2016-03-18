@@ -26,7 +26,7 @@
 | Week 5 Feb 26 | Creating Vector Data | Adobe Scripting | [class notes](week_5)
 | | **Video** |
 | Week 6 | Generating Animations | Javascript + P5 | [class notes](week_6)
-| Week 7 | Manipulating Live Video | Quartz Composer | [class notes](#)
+| Week 7 | Manipulating Live Video | Quartz Composer | [class notes](week_7)
 | | **Sound** |
 | Week 8 | Visualizing Sound | Quartz Composer | [class notes](#)
 | Week 9 | Generating Sound | TBD | [class notes](#)
