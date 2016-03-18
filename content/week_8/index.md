@@ -5,6 +5,22 @@ Pitchforks, Musical Instrument, LED Light Source (Projector)
 - [ESD Safety](https://www.youtube.com/watch?v=RtlYi1yLTVQ)
 - [IR Thermal Camera](https://www.youtube.com/watch?v=1DiqL8iFD8g)
 - [Ultraviolet Camera](https://www.youtube.com/watch?v=o9BqrSAHbTc)
+- [Speaking Piano](https://www.youtube.com/watch?v=muCPjK4nGY4)
+
+# Computers, Humans, Physics
+
+- Computers are physical machines.
+- A modern computer CPU is composed of 1,000,000,000+ transistors
+- Conductive materials allow electrically charged particals to flow
+- Those particles can be pushed along by magnets (among other things)
+- Those particles push into other particles, pushing them along. 
+- The pushing propagates very quickly, though the particles may progress slowly. In fact the particles may just move a little bit back and forth.
+- This all works backwards too, the moving charged particles can push back on magnets.
+- Motor to Motor
+- Motor to Light
+- Motor to Speaker
+
+[Electricity Misconceptions Spread by K-6 Textbooks](http://amasci.com/miscon/elect.html)
 
 
 # Light
@@ -133,16 +149,12 @@ This pressure wave can push on other things like microphones and our ears. Our e
 - Easily noticed off key notes in a song.
 
 
-# A Wave Propagated On a Wave
-
-
 # Vision VS Hearing
 
 - Our vision prioritizes spacial information over spectral information. 
 - Our hearing prioritizes spectral information over spacial informational.
 - We are pretty good at telling where a sound originates, but much better at telling where a light originates.
 - We can tell what color a light is emitting, but we can understand the spectrum of a sound better.
-
 
 
 
@@ -158,11 +170,26 @@ Our audio recording and playback capabilities are much closer to saturating the 
 Even two perfect microphones, recordings, and speakers can do a pretty good job of fooling you into thinking a recording sound is a real sound. But a recording not enough on its own. We can move our heads, and we can use our understanding of space in interpreting sounds. For VR sound, the computer must process the sound to place sounds three-dimensional, acoustic space.
 
 
+# Lets Make Noise
+
+# A Wave Propagated On a Wave
+
+- When we talk about sine waves, square waves, triangle waves we are not talking about the wave propagting the signal.
+- Instead, we are talking about the shape of the signal. Air pressure over time at a specific place (like our ear). Also, the position of the speaker over time, and the voltage on the wire over time.
 
 
+# Additive Synthesis
 
-# Additive Synthesis and  FFT
+- All pitched tones can be created by adding sinwaves together.
+- Square wave, triangle wave, sawtooth wave
+- The tone of a guitar, or oboe, or triangle
 
+- By controlling the envolope of these tones we can create a huge range of sounds.
+
+- [Wikipedia Additive Synthesis](https://en.wikipedia.org/wiki/Additive_synthesis)
+- [My Notes on Additive Synthesis](http://jbakse.github.io/comp_demos/additive_synthesis/)
+
+# FFT
 
 
 
