@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/class_notes/styles/bootswatch.css">
+	<link rel="stylesheet" type="text/css" href="/class_notes/styles/atelier-health.light.css">
+	<link rel="stylesheet" type="text/css" href="/class_notes/styles/main.css">
+	<script type="text/javascript">
+		var base_url = "/class_notes/";
+	</script>
+
+</head>
+<body>
+	<!-- title:  -->
+	<div class="container">
+		<h1>Week 4 - Visualizing Sound</h1>
+<p>Pitchforks, Musical Instrument, LED Light Source (Projector)</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=RtlYi1yLTVQ">ESD Safety</a></li>
+<li><a href="https://www.youtube.com/watch?v=1DiqL8iFD8g">IR Thermal Camera</a></li>
+<li><a href="https://www.youtube.com/watch?v=o9BqrSAHbTc">Ultraviolet Camera</a></li>
+<li><a href="https://www.youtube.com/watch?v=muCPjK4nGY4">Speaking Piano</a></li>
+</ul>
+<h1>Computers, Humans, Physics</h1>
+<ul>
+<li>Computers are physical machines.</li>
+<li>A modern computer CPU is composed of 1,000,000,000+ transistors</li>
+<li>Conductive materials allow electrically charged particals to flow</li>
+<li>Those particles can be pushed along by magnets (among other things)</li>
+<li>Those particles push into other particles, pushing them along.</li>
+<li>The pushing propagates very quickly, though the particles may progress slowly. In fact the particles may just move a little bit back and forth.</li>
+<li>This all works backwards too, the moving charged particles can push back on magnets.</li>
+<li>Motor to Motor</li>
+<li>Motor to Light</li>
+<li>Motor to Speaker</li>
+</ul>
+<p><a href="http://amasci.com/miscon/elect.html">Electricity Misconceptions Spread by K-6 Textbooks</a></p>
+<h1>Light</h1>
+<blockquote>
+<p>The World -&gt; EM Waves -&gt; Eye -&gt; Visual Processing -&gt; Mind</p>
+</blockquote>
+<p><a href="https://www.youtube.com/watch?v=FjHJ7FmV0M4">Richard Feynman talks about light</a></p>
+<h2>The Electromagnetic Spectrum</h2>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/EM_Spectrum_Properties_edit.svg/675px-EM_Spectrum_Properties_edit.svg.png" alt="Spectrum"></p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Cone-fundamentals-with-srgb-spectrum.svg/540px-Cone-fundamentals-with-srgb-spectrum.svg.png" alt="Visual Spectrum"></p>
+<table>
+<thead>
+<tr><th>Cone type</th><th>Name</th><th>Range</th><th>Peak wavelength</th><th>Colors</th></tr>
+</thead>
+<tbody>
+<tr><td>S Short</td><td>β</td><td>400–500 nm</td><td>420–440 nm</td><td><strong>Blue</strong></td></tr>
+<tr><td>M Medium</td><td>γ</td><td>450–630 nm</td><td>534–555 nm</td><td><strong>Green</strong>, Yellow</td></tr>
+<tr><td>L Long</td><td>ρ</td><td>500–700 nm</td><td>564–580 nm</td><td>Green, Yellow, <strong>Red</strong></td></tr>
+</tbody>
+</table>
+<p><a href="https://en.wikipedia.org/wiki/Electromagnetic_spectrum">Wikipedia: Electromagnetic Spectrum</a></p>
+<h2>How Good Our Eyes Are</h2>
+<ul>
+<li><p>Our eyes have ~120 million rods that detect brightness and ~6.5 million cones that detect color.</p></li>
+<li><p>Angular resolution: 1 arcminute or .02°
+Thats about 250 dpi at one foot away, 3 pixels/mm at 1 meter, something 6 inches wide about a mile away. We can actualy see things much smaller than this, when they are bright, we just can understand their shape. For example a bright led would be easily visible a mile away in a dark environment.</p></li>
+<li><p>Field of View: ~ 160° x 175°
+But resolution is very center biased.</p></li>
+<li><p>Able to perceive electromagnetic waves from 390 to 700nm, and can differentiate hues as close as 1-10 nm.</p></li>
+<li><p>In the US more than 3% of of those 40 years and older are either legally blind (20/200 vision or worse, with corrective lenses) or visually impaired (20/40 or worse).</p></li>
+<li><p>In the US more 7% of males and .4% of females have some form of color-blindness.</p></li>
+</ul>
+<p><a href="https://en.wikipedia.org/wiki/Naked_eye">Wikipedia: Naked Eye</a>
+<a href="https://en.wikipedia.org/wiki/Color_vision">Wikipedia: Color Vision</a>
+<a href="http://www.cdc.gov/visionhealth/basic_information/vision_loss_burden.htm">CDC: The Burden of Vision Loss</a></p>
+<h2>Color</h2>
+<p><a href="http://www.purple.com/">Purple</a></p>
+<h3>Emissive Color</h3>
+<p>Sunlight contains electromagnetic radian in many wavelengths. <a href="https://en.wikipedia.org/wiki/Sunlight">Sunlight</a></p>
+<p>An LED provides electromagnetic radian in a very specific wavelength range.</p>
+<p>An LED computer display has LEDs of three colors. It can vary the intensity of those three colors, but can’t provide electromagnetic radiation in the wavelengths between them.</p>
+<p>We perceive the mix of the three colors as a single color.</p>
+<h3>Reflective Color</h3>
+<p>A reflective object doesn’t reflect color of single wavelength. Instead it reflects/absorbs all wavelengths at different amounts.</p>
+<p>We perceive the reflections as a single color.</p>
+<p>A reflective color cannot be brighter than the lighting in any wavelength.</p>
+<p>We adjust our perceived color of an image based on our understanding of the lighting.</p>
+<h2>How Good our Visual Processing Is</h2>
+<ul>
+<li>Depth Perception (Binocular and not)</li>
+<li>Estimation of “True” Color, or Color Under Different Lighting <a href="https://en.wikipedia.org/wiki/The_dress_(viral_phenomenon)">That Dress</a></li>
+<li>Pattern Recognition</li>
+<li>We can differentiate a solid light from a flickering one, up to 60+ hz.</li>
+</ul>
+<h2>Thoughts</h2>
+<p>Our understanding of color/color theory is informed from the anatomy of our eye and the way our mind processes vision.</p>
+<p>We talk about what color something is a single thing: dark blue, pink, vivid green. We don’t think about the color of something as a little bit green, a little bit blue, and a lot red. We definitely don’t think of color as the sum of the many in between wavelengths.</p>
+<h1>Sound</h1>
+<h1>What Sound Is</h1>
+<p>A wave of air pressure and displacement. Something in contact with air vibrates. As that thing pushes forward, it pushes the particles air in front of it forward into the the particles of air in front of them. Making an area of higher pressure. This high pressure area pushes out in all directions, and a wave of pressure begins to propagate though the air.</p>
+<p>This pressure wave can push on other things like microphones and our ears. Our ears are able to detect very rapid and subtle changes in this pressure. And we are then able to understand the amplitude, frequency, and even shape of these changes. Because we have two ears, spaced a few inches apart, we can compare what each ear hears to gain spacial information as well.</p>
+<p><a href="https://www.youtube.com/watch?v=flIAxGsV1q0">How Hearing Works</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Sound">Wikipedia: Sound</a></p>
+<h1>How Good Our Ears Are</h1>
+<ul>
+<li><p>16,000-20,000 hairs in a curled up tube, the cochlea.
+The rods and cones in the eye perceive signals from different locations. The hairs in the cochlea are “tuned” to different frequencies.</p></li>
+<li><p>Detect Pressure Changes &lt; 1 billionth of the atmospheric pressure</p></li>
+<li><p>We can hear sounds 10 trillion times louder than that, where they start hurting.</p></li>
+<li><p>Detect Pitches/Frequencies from 20hz to 20,000hz, and can differentiate frequencies as close as 5 cents (.15hz at Middle C).</p></li>
+<li><p>An 88 Key Piano ranges from A0 (27.5 hz) to C8 (4186.01 hz)</p></li>
+<li><p>Detect Timbre</p></li>
+<li><p>About 20% of Americans have some hearing loss.</p></li>
+</ul>
+<p><a href="https://soundphysics.ius.edu/?page_id=1005">Our Ears Make Mistakes</a>
+<a href="http://hyperphysics.phy-astr.gsu.edu/hbase/sound/earsens.html">Sensitivity of Human Ear</a></p>
+<h1>How Good Our Audio Processing Is</h1>
+<ul>
+<li><p>3D Location of Sound
+We have two sound sensors, and we can detect differences in the amplitude an timing of signal between them. We can turn our head to hear sounds from a different &quot;view point&quot;. We can infer information from acoustic context including echoes and spectral attenuation.</p>
+<p><a href="https://en.wikipedia.org/wiki/Sound_localization">Wikipedia: Sound Localization</a></p></li>
+<li><p>Source Differentiation
+Listen to one person in noisy room, or to a specific instrument in a symphony.</p></li>
+<li><p>Very, very good temporal pattern detection.</p></li>
+<li><p>Easily noticed off key notes in a song.</p></li>
+</ul>
+<h1>Vision VS Hearing</h1>
+<ul>
+<li>Our vision prioritizes spacial information over spectral information.</li>
+<li>Our hearing prioritizes spectral information over spacial informational.</li>
+<li>We are pretty good at telling where a sound originates, but much better at telling where a light originates.</li>
+<li>We can tell what color a light is emitting, but we can understand the spectrum of a sound better.</li>
+</ul>
+<h1>Light, Sound, And Virtual Reality</h1>
+<blockquote>
+<p>“To give you just one example of how much better visuals can get; in order for Crescent Bay to deliver the same pixel density as a monitor at a normal viewing distance, it would have to have a resolution of about 5K by 5K per eye, something like 20 times as many pixels as it currently has. In order for it to have retinal resolution at a field of view of 180 degrees, it would have to have something on the order of 16K by 16K resolution, roughly 200 times as many pixels.”</p>
+</blockquote>
+<p>— Michael Abrash</p>
+<p>Our audio recording and playback capabilities are much closer to saturating the sensitivity of our ears.</p>
+<p>Even two perfect microphones, recordings, and speakers can do a pretty good job of fooling you into thinking a recording sound is a real sound. But a recording not enough on its own. We can move our heads, and we can use our understanding of space in interpreting sounds. For VR sound, the computer must process the sound to place sounds three-dimensional, acoustic space.</p>
+<h1>Lets Make Noise</h1>
+<h1>A Wave Propagated On a Wave</h1>
+<ul>
+<li>When we talk about sine waves, square waves, triangle waves we are not talking about the wave propagting the signal.</li>
+<li>Instead, we are talking about the shape of the signal. Air pressure over time at a specific place (like our ear). Also, the position of the speaker over time, and the voltage on the wire over time.</li>
+</ul>
+<h1>Additive Synthesis</h1>
+<ul>
+<li><p>All pitched tones can be created by adding sinwaves together.</p></li>
+<li><p>Square wave, triangle wave, sawtooth wave</p></li>
+<li><p>The tone of a guitar, or oboe, or triangle</p></li>
+<li><p>By controlling the envolope of these tones we can create a huge range of sounds.</p></li>
+<li><p><a href="https://en.wikipedia.org/wiki/Additive_synthesis">Wikipedia Additive Synthesis</a></p></li>
+<li><p><a href="http://jbakse.github.io/comp_demos/additive_synthesis/">My Notes on Additive Synthesis</a></p></li>
+</ul>
+<h1>FFT</h1>
+<h1>Links</h1>
+<p><a href="http://www.thermal.com/">Thermal</a>
+<a href="http://www.photovideoedu.com/Learn/Articles/digital-infrared-photography-practical-aspects.aspx">Infrared Photography</a></p>
+
+	</div>
+	
+	<script type="text/javascript" src="/class_notes/javascript/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="/class_notes/javascript/highlight.pack.js"></script>
+	<script type="text/javascript" src="/class_notes/javascript/p5_example.js"></script>
+	<script type="text/javascript">
+		$( function() {
+			$("table").addClass("table table-bordered");
+		});
+	</script>
+</body>
+</html>
