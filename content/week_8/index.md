@@ -1,4 +1,4 @@
-# Week 4 - Visualizing Sound
+# Week 8 - Visualizing Sound
 Pitchforks, Musical Instrument, LED Light Source (Projector)
 
 

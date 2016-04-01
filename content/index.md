@@ -29,7 +29,7 @@
 | Week 7 | Manipulating Live Video | Quartz Composer | [class notes](week_7)
 | | **Sound** |
 | Week 8 | Visualizing Sound | Quartz Composer | [class notes](week_8)
-| Week 9 | Generating Sound | TBD | [class notes](#)
+| Week 9 | Generating Music | TBD | [class notes](week_9)
 | | **Miscellanea** |
 | Week 10 | Generating Text | Javascript | [class notes](#)
 | Week 11 | Generating 3D Forms | OpenSCAD | [class notes](#)

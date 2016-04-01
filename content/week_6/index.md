@@ -1,4 +1,4 @@
-# Week 5 - Animations
+# Week 6 - Animations
 
 [Beyond the Mind's Eye](https://www.youtube.com/watch?v=H9V-LShEoCc)
 
