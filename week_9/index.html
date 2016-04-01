@@ -19,6 +19,8 @@
 <li><a href="sketch_music">sketch_music</a></li>
 <li><a href="http://jeremywentworth.com/webkitSynth/#">a little synth thing</a></li>
 <li><a href="https://www.youtube.com/watch?v=Y-rZD2AsHbI">Fur Elise Minor/Major</a></li>
+<li><a href="http://yoavz.com/music_rnn/">Neural Network Music</a></li>
+<li><a href="https://soundcloud.com/ibm/sets/remixes-made-with-tennis-data">Tennis Music</a></li>
 </ul>
 <h2>Cultural Subjectivity</h2>
 <ul>
@@ -62,8 +64,8 @@
 </thead>
 <tbody>
 <tr><td>Equal Temperament hz</td><td>261.63</td><td>277.18</td><td>293.66</td><td>311.13</td><td>329.63</td><td>349.23</td><td>369.99</td><td>392.00</td><td>415.30</td><td>440.00</td><td>466.16</td><td>493.88</td></tr>
-<tr><td>Equal Temperament ratio</td><td>1</td><td>1.059…</td><td>1.122…</td><td>1.189…</td><td>1.259…</td><td>1.334…</td><td>1.414…</td><td>1.498…</td><td>1.587…</td><td>1.681…</td><td>1.781…</td><td>1.887…</td></tr>
-<tr><td>Just Interval Ratio</td><td>1</td><td>-</td><td>1.125</td><td>-</td><td>1.2</td><td>1.333…</td><td>-</td><td>1.5</td><td>-</td><td>1.666…</td><td>-</td><td>1.875</td></tr>
+<tr><td>Equal Temperament ratio</td><td>1</td><td>1.059</td><td>1.122</td><td>1.189</td><td>1.259</td><td>1.334</td><td>1.414</td><td>1.498</td><td>1.587</td><td>1.681</td><td>1.781</td><td>1.887</td></tr>
+<tr><td>Just Interval Ratio</td><td>1</td><td>-</td><td>1.125</td><td>-</td><td>1.2</td><td>1.333</td><td>-</td><td>1.5</td><td>-</td><td>1.666</td><td>-</td><td>1.875</td></tr>
 <tr><td>Just Interval Ratio</td><td>1/1</td><td>-</td><td>9/8</td><td>-</td><td>5/4</td><td>4/3</td><td>-</td><td>3/2</td><td>-</td><td>5/3</td><td>-</td><td>15/8</td></tr>
 </tbody>
 </table>
@@ -98,8 +100,51 @@
 <li>Most of the times the notes and rests don’t continue from one measure to the next.</li>
 <li>These rules are broken from time to time for different effects.</li>
 </ul>
-<h2>QuickMusic, MonoSynth, and Examples</h2>
-<p><a href="docco_out">Example Documentation</a></p>
+<h2>Arrays</h2>
+<pre><code class="language-javascript">emptyArray = [];
+simpleArray = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+nestedArray = [[<span class="hljs-number">60</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">62</span>, <span class="hljs-number">1</span>]];
+nestedArray.push([<span class="hljs-number">64</span>, <span class="hljs-number">1</span>]);
+nestedArray[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>];
+nestedArray[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>];
+nestedArray2 = [[<span class="hljs-number">70</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">72</span>, <span class="hljs-number">1</span>]];
+combinedArray = nestedArray.concat(nestedArray2);
+</code></pre>
+<h2>MonoSynth, QuickMusic, and Examples</h2>
+<p>For this weeks class, I have created two small javascript libraries and several example sketches.</p>
+<h3>MonoSynth</h3>
+<p>MonoSynth, uses the p5.js oscillator and envelope classes to create an synth object that can play back a sequence of notes.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> synth = <span class="hljs-keyword">new</span> MonoSynth();
+synth.playNotes([[<span class="hljs-number">60</span>, <span class="hljs-number">1</span>/<span class="hljs-number">4</span>], [<span class="hljs-number">62</span>, <span class="hljs-number">1</span>/<span class="hljs-number">4</span>]]);
+</code></pre>
+<h3>QuickMusic</h3>
+<p>QuickMusic provides a few utilty functions for processing sequences of notes and working with keys/scales.</p>
+<p><strong>Supported Musical Scales</strong></p>
+<ul>
+<li><code>quickMusic.scales.major</code></li>
+<li><code>quickMusic.scales.minor</code></li>
+<li><code>quickMusic.scales.phrygianDominate</code></li>
+<li><code>quickMusic.scales.minorPentatonic</code></li>
+</ul>
+<p><strong>Library Functions</strong></p>
+<ul>
+<li><p><code>quickMusic.getNoteInScale(position, tonic, scale)</code><br>
+translate from scale positoin to midi note number</p></li>
+<li><p><code>quickMusic.midiToName(number)</code><br>
+find the name of a midi note number</p></li>
+<li><p><code>quickMusic.nameToMIDI(name, octave)</code><br>
+find the midinote number by name</p></li>
+<li><p><code>quickMusic.imposePhrase(phrase, tonic, scale)</code><br>
+translate notes from scale position to midi note number</p></li>
+<li><p><code>quickMusic.shiftPhrase(phrase, amount)</code><br>
+shift notes up or down in pitch</p></li>
+<li><p><code>quickMusic.clonePhrase(phrase)</code><br>
+create copy of a phrase</p></li>
+</ul>
+<h3>Examples</h3>
+<p>I also created several fully commented example scripts, we will review them in class, but I suggest also reading them at your own pace.</p>
+<h2><a href="sketch_music.zip">Example Download</a></h2>
+<h2><a href="docco_out">Example Documentation</a></h2>
 <h1>Links</h1>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Javascript Web Audio API</a></li>
