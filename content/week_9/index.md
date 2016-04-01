@@ -4,7 +4,8 @@
 - [sketch_music](sketch_music)
 - [a little synth thing](http://jeremywentworth.com/webkitSynth/#)
 - [Fur Elise Minor/Major](https://www.youtube.com/watch?v=Y-rZD2AsHbI)
-
+- [Neural Network Music](http://yoavz.com/music_rnn/)
+- [Tennis Music](https://soundcloud.com/ibm/sets/remixes-made-with-tennis-data)
 
 ## Cultural Subjectivity
 - Music Theory and Graphic Design
@@ -46,8 +47,8 @@ Still, these are the assumptions I used in creating the examples we will study t
 Note | C | C# | D | D# | E | F | F# | G | G# | A | A# | B
 - | - | -  | - | -  | - | - | -  | - | -  | - | -  | - 
 Equal Temperament hz | 261.63 | 277.18 | 293.66 | 311.13 | 329.63 | 349.23 | 369.99 | 392.00 | 415.30 | 440.00 | 466.16 | 493.88
-Equal Temperament ratio | 1 | 1.059... | 1.122... | 1.189... | 1.259... | 1.334... | 1.414... | 1.498... | 1.587... | 1.681... | 1.781... | 1.887... | 
-Just Interval Ratio | 1 | - | 1.125 | - | 1.2 | 1.333... | - | 1.5 | - | 1.666... | - | 1.875
+Equal Temperament ratio | 1 | 1.059 | 1.122 | 1.189 | 1.259 | 1.334 | 1.414 | 1.498 | 1.587 | 1.681 | 1.781 | 1.887 | 
+Just Interval Ratio | 1 | - | 1.125 | - | 1.2 | 1.333 | - | 1.5 | - | 1.666 | - | 1.875
 Just Interval Ratio | 1/1 | - | 9/8 | - | 5/4 | 4/3 | - | 3/2 | - | 5/3 | - | 15/8
 
 
@@ -77,12 +78,68 @@ Step    | w |    | w |    | h | w |    | w |    | w |    | h
 - Most of the times the notes and rests don't continue from one measure to the next.
 - These rules are broken from time to time for different effects.
 
+## Arrays
+
+```javascript
+emptyArray = [];
+simpleArray = [1, 2, 3];
+nestedArray = [[60, 1], [62, 1]];
+nestedArray.push([64, 1]);
+nestedArray[1][0];
+nestedArray[1][1];
+nestedArray2 = [[70, 1], [72, 1]];
+combinedArray = nestedArray.concat(nestedArray2);
+```
 
 
+## MonoSynth, QuickMusic, and Examples
 
-## QuickMusic, MonoSynth, and Examples
+For this weeks class, I have created two small javascript libraries and several example sketches. 
 
-[Example Documentation](docco_out)
+
+### MonoSynth
+
+MonoSynth, uses the p5.js oscillator and envelope classes to create an synth object that can play back a sequence of notes.
+
+```javascript
+var synth = new MonoSynth();
+synth.playNotes([[60, 1/4], [62, 1/4]]);
+```
+
+### QuickMusic
+QuickMusic provides a few utilty functions for processing sequences of notes and working with keys/scales.
+
+**Supported Musical Scales**
+- `quickMusic.scales.major`
+- `quickMusic.scales.minor`
+- `quickMusic.scales.phrygianDominate`
+- `quickMusic.scales.minorPentatonic`
+
+**Library Functions**
+- `quickMusic.getNoteInScale(position, tonic, scale)`  
+  translate from scale positoin to midi note number
+
+- `quickMusic.midiToName(number)`  
+  find the name of a midi note number
+
+- `quickMusic.nameToMIDI(name, octave)`  
+  find the midinote number by name
+
+- `quickMusic.imposePhrase(phrase, tonic, scale)`  
+  translate notes from scale position to midi note number
+
+- `quickMusic.shiftPhrase(phrase, amount)`  
+  shift notes up or down in pitch
+
+- `quickMusic.clonePhrase(phrase)`  
+  create copy of a phrase
+
+
+### Examples
+I also created several fully commented example scripts, we will review them in class, but I suggest also reading them at your own pace.
+
+## [Example Download](sketch_music.zip)
+## [Example Documentation](docco_out)
 
 
 # Links
