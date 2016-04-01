@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>sketch_kitchen.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>sketch_kitchen.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p>This is a big demo, building on <code>sketch_advanced.js</code>
+and featuring a variety of more advanced topics.</p>
+<ul>
+<li>Uses a seed when generating songs, so the same ‘random’ song can be generated twice.</li>
+<li>Generates songs with two tracks: lead and bass.</li>
+<li>Uses a <em>callback</em> to follow and visualize song playback</li>
+<li>Uses <code>setInterval</code> to schedule a series of events.</li>
+</ul>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p>Declare the synth’s globally so that all parts of
+the program can access them easily.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">var</span> leadSynth, bassSynth;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p><strong>setup()</strong> is called by p5 kick off the program.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
+    createCanvas(<span class="hljs-number">640</span>, <span class="hljs-number">360</span>);
+    MonoSynth.prototype.reportNote = showNote;
+    background(<span class="hljs-number">50</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>Call nextSong now, to play the first song.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    nextSong();</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>Setup a interval to play a new song every 9000 milliseconds.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        nextSong();
+    }, <span class="hljs-number">9000</span>);
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p><strong>nextSong()</strong> Clears the drawing area, and kicks off the song.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">nextSong</span>(<span class="hljs-params"></span>) </span>{</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>Set up drawing state.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    background(<span class="hljs-number">50</span>);
+    textSize(<span class="hljs-number">32</span>);
+    fill(<span class="hljs-number">255</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>Pick a seed.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> songSeed = floor(random(<span class="hljs-number">100000</span>));</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>Pass seed to song generator.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> song = generateSong(songSeed);
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p><strong>generateSong</strong> generates a song, creates synths, and plays the song</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">generateSong</span>(<span class="hljs-params">seed</span>) </span>{</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p>Call chooseParams with the seed to create the parameters that shape the song.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> params = chooseParams(seed);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>At this point we have a structure that represents all the parameters
+that shape the song. If you like, you could override the parameters here,
+to make sure that all songs are in the same key, or something like that.</p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p>Show the params in the javascript console.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(params, <span class="hljs-literal">null</span>, <span class="hljs-string">" "</span>));</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <p>Pass the chosen parameters to <code>makeBassline</code> and <code>makeLead</code> to generate the song.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> bassline = makeBassline(params.bass);
+    <span class="hljs-keyword">var</span> lead = makeLead(params.lead);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-15">&#182;</a>
+              </div>
+              <p>Create the baseSynth and configure it according to the parameters.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    bassSynth = <span class="hljs-keyword">new</span> MonoSynth();
+    configureSynth(bassSynth, params.bass);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-16">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-16">&#182;</a>
+              </div>
+              <p>We want the baseline quieter than the lead.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    bassSynth.amplitude = <span class="hljs-number">0.25</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-17">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-17">&#182;</a>
+              </div>
+              <p>Translate the bassline into the key from the params.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    bassline = quickMusic.imposePhrase(bassline, quickMusic.nameToMIDI(params.tonic,
+        params.bass.octave), params.scale);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-18">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-18">&#182;</a>
+              </div>
+              <p>Start the bassline playing.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    bassSynth.playNotes(bassline);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-19">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-19">&#182;</a>
+              </div>
+              <p>Create the lead synth.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    leadSynth = <span class="hljs-keyword">new</span> MonoSynth();
+    configureSynth(leadSynth, params.lead);
+    bassSynth.amplitude = <span class="hljs-number">0.5</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-20">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-20">&#182;</a>
+              </div>
+              <p>Set the key…</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    lead = quickMusic.imposePhrase(lead, quickMusic.nameToMIDI(params.tonic,
+        params.lead.octave), params.scale);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-21">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-21">&#182;</a>
+              </div>
+              <p>Play the lead.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    leadSynth.playNotes(lead);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-22">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-22">&#182;</a>
+              </div>
+              <p>Draw info about the song to screen.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    text(<span class="hljs-string">"Song: "</span> + seed, <span class="hljs-number">10</span>, <span class="hljs-number">40</span>);
+    text(params.tonic + <span class="hljs-string">" "</span> + params.scaleName, <span class="hljs-number">10</span>, height - <span class="hljs-number">40</span>);
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-23">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-23">&#182;</a>
+              </div>
+              <p><strong>chooseParams()</strong> creates an object containing the parameters
+that hape the song.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">chooseParams</span>(<span class="hljs-params">seed</span>) </span>{</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-24">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-24">&#182;</a>
+              </div>
+              <p>If not seed is provided, pick one at random.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    songSeed = seed || floor(random(<span class="hljs-number">1000000</span>));</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-25">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-25">&#182;</a>
+              </div>
+              <p>Report the seed on the javascript console.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Song Seed: "</span>, songSeed);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-26">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-26">&#182;</a>
+              </div>
+              <p>Use randomSeed to set the seed. Random values will be repeatable.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    randomSeed(songSeed);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-27">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-27">&#182;</a>
+              </div>
+              <p>Create the empty object to contain all the parameters.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    params = {};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-28">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-28">&#182;</a>
+              </div>
+              <p>Create a param property named ‘tonic’, set its value to one of the notes.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    params.tonic = sample(quickMusic.noteNames);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-29">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-29">&#182;</a>
+              </div>
+              <p>The name of the scale used by the song.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    params.scaleName = sample(<span class="hljs-built_in">Object</span>.keys(quickMusic.scales));</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-30">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-30">&#182;</a>
+              </div>
+              <p>The scale intervals for the song.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    params.scale = quickMusic.scales[params.scaleName];</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-31">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-31">&#182;</a>
+              </div>
+              <p>Create a property called ‘lead’ that will contain parameters about the lead synth and music.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    params.lead = {};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-32">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-32">&#182;</a>
+              </div>
+              <p>A human readable name.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    params.lead.name = <span class="hljs-string">"Lead"</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-33">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-33">&#182;</a>
+              </div>
+              <p>What octave to play in.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    params.lead.octave = sample([<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-34">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-34">&#182;</a>
+              </div>
+              <p>The tone to use.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    params.lead.waveType = sample([<span class="hljs-string">'sine'</span>, <span class="hljs-string">'triangle'</span>, <span class="hljs-string">'sawtooth'</span>, <span class="hljs-string">'square'</span>]);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-35">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-35">&#182;</a>
+              </div>
+              <p>Spacing is the time between notes.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    params.lead.spacing = random(<span class="hljs-number">-0.1</span>, <span class="hljs-number">0.15</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-36">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-36">&#182;</a>
+              </div>
+              <p>The decay of tones.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    params.lead.decay = min(random(), random(), random());</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-37">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-37">&#182;</a>
+              </div>
+              <p>A random seed for generating the music.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    params.lead.seed = floor(random(<span class="hljs-number">10000</span>));</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-38">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-38">&#182;</a>
+              </div>
+              <p>How far to shift the <code>B</code> measure.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    params.lead.phraseShift = sample([<span class="hljs-number">-3</span>, <span class="hljs-number">-2</span>, <span class="hljs-number">-2</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">14</span>]);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-39">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-39">&#182;</a>
+              </div>
+              <p>Candidate step sizes for the melody.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    params.lead.brownianSteps = [<span class="hljs-number">-2</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>];</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-40">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-40">&#182;</a>
+              </div>
+              <p>Pick on of several types of note length groups.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    params.lead.noteLengths = sample([
+        [<span class="hljs-number">1</span> / <span class="hljs-number">2</span>, <span class="hljs-number">1</span> / <span class="hljs-number">4</span>, <span class="hljs-number">1</span> / <span class="hljs-number">4</span>, <span class="hljs-number">1</span> / <span class="hljs-number">4</span>, <span class="hljs-number">1</span> / <span class="hljs-number">8</span>, <span class="hljs-number">1</span> / <span class="hljs-number">8</span>],
+        [<span class="hljs-number">1</span> / <span class="hljs-number">2</span>, <span class="hljs-number">1</span> / <span class="hljs-number">4</span>],
+        [<span class="hljs-number">1</span> / <span class="hljs-number">8</span>],
+        [<span class="hljs-number">1</span> / <span class="hljs-number">2</span>, <span class="hljs-number">1</span> / <span class="hljs-number">16</span>, <span class="hljs-number">1</span> / <span class="hljs-number">16</span>, <span class="hljs-number">1</span> / <span class="hljs-number">16</span>],
+        [<span class="hljs-number">1</span> / <span class="hljs-number">3</span>, <span class="hljs-number">1</span> / <span class="hljs-number">6</span>]
+    ]);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-41">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-41">&#182;</a>
+              </div>
+              <p>How likely a note will silent, creating a rest.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    params.lead.restChance = sample([<span class="hljs-number">0</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">0.5</span>]);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-42">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-42">&#182;</a>
+              </div>
+              <p>Similar settings for the bass part</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    params.bass = {};
+    params.bass.name = <span class="hljs-string">"Bass"</span>;
+    params.bass.octave = sample([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]);
+    params.bass.waveType = sample([<span class="hljs-string">'sine'</span>, <span class="hljs-string">'triangle'</span>, <span class="hljs-string">'sawtooth'</span>, <span class="hljs-string">'square'</span>]);
+    params.bass.spacing = random(<span class="hljs-number">-0.1</span>, <span class="hljs-number">0.15</span>);
+    params.bass.decay = min(random(), random(), random());
+    params.bass.seed = floor(random(<span class="hljs-number">10000</span>));
+
+    <span class="hljs-keyword">return</span> params;
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-43">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-43">&#182;</a>
+              </div>
+              <p><strong>configureSynth()</strong> sets values in the provided synth according the provided synthParams</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">configureSynth</span>(<span class="hljs-params">synth, synthParams</span>) </span>{
+    synth.name = synthParams.name;
+    synth.oscillator.setType(synthParams.waveType);
+    synth.spacing = synthParams.spacing;
+    synth.envelope.setADSR(<span class="hljs-number">0.01</span>, <span class="hljs-number">0.05</span>, <span class="hljs-number">0.75</span>, synthParams.decay);
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-44">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-44">&#182;</a>
+              </div>
+              <p><strong>makeBassLine()</strong> generates the notes of the bassline.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">makeBassline</span>(<span class="hljs-params">params</span>) </span>{
+    randomSeed(params.seed);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-45">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-45">&#182;</a>
+              </div>
+              <p>Start with an empty phrase.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> phrase = [];</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-46">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-46">&#182;</a>
+              </div>
+              <p>Choose how many beats per measure.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> beats = sample([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>]);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-47">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-47">&#182;</a>
+              </div>
+              <p>Make Four Measures.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-48">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-48">&#182;</a>
+              </div>
+              <p>Choose a note that is either the tonic, the 4th or the 5th.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>        <span class="hljs-keyword">var</span> position = sample([<span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-49">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-49">&#182;</a>
+              </div>
+              <p>Add the notes.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> beat = <span class="hljs-number">0</span>; beat &lt; beats; beat++) {
+            phrase.push([position, <span class="hljs-number">1</span> / beats]);
+        }
+    }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-50">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-50">&#182;</a>
+              </div>
+              <p>Repeat the first four measures to create the second four measures.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    phrase = phrase.concat(phrase);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-51">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-51">&#182;</a>
+              </div>
+              <p>Remove last measure of beats.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    phrase = phrase.slice(<span class="hljs-number">0</span>, phrase.length - beats);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-52">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-52">&#182;</a>
+              </div>
+              <p>Add a long tonic note. Ending on the tonic sometimes sounds nice.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    phrase.push([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>]);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-53">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-53">&#182;</a>
+              </div>
+              <p>Return the phrase.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">return</span> phrase;
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-54">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-54">&#182;</a>
+              </div>
+              <p><strong>makeLead()</strong> generates a structured something like
+this: <code>A B B&#39;B / A B B&#39; C</code></p>
+<p>Each letter represents a four beat measure.
+The first and fifth measures are the same, as are the second
+and sixth and third and seventh.</p>
+<p>The measure <code>B&#39;</code> is a variation on measure <code>B</code>. Using repetion and
+variation makes the song feel more cohesive.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">makeLead</span>(<span class="hljs-params">params</span>) </span>{
+    randomSeed(params.seed);
+
+    <span class="hljs-keyword">var</span> fullPhrase = [];
+    <span class="hljs-keyword">var</span> introPhrase = makePhrase(params);
+    <span class="hljs-keyword">var</span> middlePhrase = makePhrase(params);
+    <span class="hljs-keyword">var</span> alternatePhrase = quickMusic.shiftPhrase(middlePhrase, params.phraseShift);
+    <span class="hljs-keyword">var</span> concludingPhrase = quickMusic.clonePhrase(middlePhrase);
+    concludingPhrase[concludingPhrase.length - <span class="hljs-number">1</span>][<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;
+
+    fullPhrase = fullPhrase.concat(
+        introPhrase,
+        middlePhrase,
+        alternatePhrase,
+        middlePhrase,
+
+        introPhrase,
+        middlePhrase,
+        alternatePhrase,
+        concludingPhrase
+    );
+
+    <span class="hljs-keyword">return</span> fullPhrase;
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-55">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-55">&#182;</a>
+              </div>
+              <p><strong>makePhrase()</strong> generates a single measure of music
+It picks notes by walking up and down the scale.
+It picks note lengths at random, being careful that the
+total length works out to 1.0</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">makePhrase</span>(<span class="hljs-params">params</span>) </span>{
+    <span class="hljs-keyword">var</span> phrase = [];
+
+    <span class="hljs-keyword">var</span> position = floor(random(<span class="hljs-number">7</span>));
+    <span class="hljs-keyword">var</span> lengthLeft = <span class="hljs-number">1</span>;
+
+
+    <span class="hljs-keyword">while</span> (lengthLeft &gt; <span class="hljs-number">0</span>) {
+        position += sample(params.brownianSteps);
+        <span class="hljs-keyword">var</span> length = sample(params.noteLengths);
+        length = constrain(length, <span class="hljs-number">0</span>, lengthLeft);
+
+        <span class="hljs-keyword">if</span> (random() &lt; params.restChance) {
+            phrase.push([<span class="hljs-string">"rest"</span>, length]);
+        } <span class="hljs-keyword">else</span> {
+            phrase.push([position, length]);
+        }
+
+        lengthLeft -= length;
+    }
+
+    <span class="hljs-keyword">return</span> phrase;
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-56">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-56">&#182;</a>
+              </div>
+              <p><strong>showNote()</strong> is a <code>callback</code> function.</p>
+<p>It gets called everytime a monosynth begins playing a note.
+It draws a visualization of that note to the stage.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showNote</span>(<span class="hljs-params">synth, note, length, time</span>) </span>{</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-57">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-57">&#182;</a>
+              </div>
+              <p>Use <code>push()</code> and <code>pop()</code> to make sure that this function doesn’t upset the drawing state used elsewhere.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    push();
+    noStroke();</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-58">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-58">&#182;</a>
+              </div>
+              <p>Pick the color based on what synth is playing the note.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">if</span> (synth === leadSynth) {
+        fill(<span class="hljs-number">0</span>, <span class="hljs-number">250</span>, <span class="hljs-number">150</span>);
+    }
+    <span class="hljs-keyword">if</span> (synth === bassSynth) {
+        fill(<span class="hljs-number">0</span>, <span class="hljs-number">150</span>, <span class="hljs-number">250</span>);
+    }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-59">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-59">&#182;</a>
+              </div>
+              <p>Draw the note.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    rect(map(time, <span class="hljs-number">0</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, width), map(note, <span class="hljs-number">0</span>, <span class="hljs-number">96</span>, height, <span class="hljs-number">0</span>), map(length, <span class="hljs-number">0</span>,
+        <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, width) - <span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>);
+    pop();
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-60">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-60">&#182;</a>
+              </div>
+              <p><strong>sample()</strong> recieves and array, selects an item in the array randomly, and returns it</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sample</span>(<span class="hljs-params">a</span>) </span>{
+    <span class="hljs-keyword">return</span> a[floor(random(a.length))];
+}</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

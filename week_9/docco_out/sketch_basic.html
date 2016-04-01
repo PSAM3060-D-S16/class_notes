@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>sketch_basic.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>sketch_basic.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p>This example shows the basics of using the MonoSynth
+class to play a series of musical notes.</p>
+<p>MonoSynth takes an array of song data to play.</p>
+<p>The song data is formatted like this</p>
+<pre><code>[
+    [notePitch, noteLength],
+    [notePitch, noteLength],
+    ...
+]
+</code></pre><p><code>notePitch</code> is a <a href="http://www.electronics.dit.ie/staff/tscarff/Music_technology/midi/midi_note_numbers_for_octaves.htm">midi note number</a></p>
+<p>Midi note numbers are whole numbers
+starting at 0 for a very low C, ending at 127 for a very high G
+You <em>could</em> pass a number with a decimal portion,
+for out of tune notes.</p>
+<p>You can also pass <code>&#39;rest&#39;</code>, to create a rest.</p>
+<p><code>noteLength</code> is the duration of the note, in seconds.</p>
+<p>MonoSynth will play the notes and rests in the provided array
+back to back.</p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p><strong>setup()</strong> is called by p5 kick off the program.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
+	createCanvas(<span class="hljs-number">640</span>, <span class="hljs-number">360</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p>Create an instance of MonoSynth to play the notes.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	<span class="hljs-keyword">var</span> synth = <span class="hljs-keyword">new</span> MonoSynth();</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>A hardcoded song.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	<span class="hljs-keyword">var</span> song = [
+		[<span class="hljs-number">64</span>, <span class="hljs-number">3</span> / <span class="hljs-number">8</span>],
+		[<span class="hljs-number">62</span>, <span class="hljs-number">1</span> / <span class="hljs-number">8</span>],
+		[<span class="hljs-number">60</span>, <span class="hljs-number">1</span> / <span class="hljs-number">4</span>],
+		[<span class="hljs-number">62</span>, <span class="hljs-number">1</span> / <span class="hljs-number">4</span>],
+
+		[<span class="hljs-number">64</span>, <span class="hljs-number">1</span> / <span class="hljs-number">4</span>],
+		[<span class="hljs-number">64</span>, <span class="hljs-number">1</span> / <span class="hljs-number">4</span>],
+		[<span class="hljs-number">64</span>, <span class="hljs-number">1</span> / <span class="hljs-number">2</span>]
+	];</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>Pass the song to the synth.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	synth.playNotes(song);
+}</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

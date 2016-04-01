@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>sketch_quickmusic.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>sketch_quickmusic.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p>This example demonstrates use of the <code>quickMusic.js</code> lib.
+This is a quick and dirty library with a few functions and properties
+that might help in quickly creating generative music.</p>
+<p>Properties</p>
+<ul>
+<li><code>scales.major</code></li>
+<li><code>scales.minor</code></li>
+<li><code>scales.phrygianDominate</code></li>
+<li><code>scales.minorPentatonic</code></li>
+</ul>
+<p>Functions</p>
+<ul>
+<li><code>getNoteInScale(position, tonic, scale)</code></li>
+<li><code>midiToName(number)</code></li>
+<li><code>nameToMIDI(name, octave)</code></li>
+<li><code>imposePhrase(phrase, tonic, scale)</code></li>
+<li><code>shiftPhrase(phrase, amount)</code></li>
+<li><code>clonePhrase(phrase)</code></li>
+</ul>
+<p>For more the details, see the comments in quickMusic.js</p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p><strong>setup()</strong> is called by p5 kick off the program.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
+	createCanvas(<span class="hljs-number">640</span>, <span class="hljs-number">360</span>);
+	<span class="hljs-keyword">var</span> synth = <span class="hljs-keyword">new</span> MonoSynth();
+	synth.playNotes(makeSongQuickMusic());
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p><strong>makeSongQuickMusic()</strong> creates the song, using quickMusic to make things a bit easier</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">makeSongQuickMusic</span>(<span class="hljs-params"></span>) </span>{
+	<span class="hljs-keyword">var</span> song = [];</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>Create an array of the pitches we’ll use in the song.
+Rather than using midi note numbers, this array holds positions
+on scale. Using scale positions is easier, because we won’t need
+to think about what notes to skip. It also lets us decide on the key
+later.</p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>All positions in one octave of a diatonic (7-pitch) scale (e.g. major)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	<span class="hljs-keyword">var</span> positions = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>Start at a random index.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	<span class="hljs-keyword">var</span> index = floor(random(positions.length));</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>Let’s make 16 notes.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">16</span>; i++) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>Pick a step amount at random from a list, step that much.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		index = index + sample([<span class="hljs-number">-1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>Make sure we don’t go outside the array bounds.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		index = constrain(index, <span class="hljs-number">0</span>, positions.length - <span class="hljs-number">1</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p>Push the note onto the song.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		song.push([
+			positions[index],
+			sample([<span class="hljs-number">1</span> / <span class="hljs-number">2</span>, <span class="hljs-number">1</span> / <span class="hljs-number">4</span>, <span class="hljs-number">1</span> / <span class="hljs-number">4</span>, <span class="hljs-number">1</span> / <span class="hljs-number">4</span>])
+		]);
+	}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p>At this point the <code>song</code> is an array that looks something like this:</p>
+<pre><code>[
+[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>/<span class="hljs-number">2</span>],
+[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>/<span class="hljs-number">4</span>],
+...
+]
+</code></pre><p>The first number in each note represent a position in a scale, rather than
+the actual midi note number to play. We can use <code>quickMusic.imposePhrase</code>
+to convert those positions to their corresponding notes.</p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>This will “impose” the phrase into C-minor.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	song = quickMusic.imposePhrase(song, quickMusic.nameToMIDI(<span class="hljs-string">"C"</span>, <span class="hljs-number">3</span>), quickMusic.scales.minor);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p>Return our finished song.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	<span class="hljs-keyword">return</span> song;
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <p><strong>sample()</strong> recieves and array, selects an item in the array randomly, and returns it</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sample</span>(<span class="hljs-params">a</span>) </span>{
+	<span class="hljs-keyword">return</span> a[floor(random(a.length))];
+}</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

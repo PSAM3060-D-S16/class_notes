@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>MonoSynth.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="../docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>MonoSynth.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p>configure jshint linter
+<a href="https://jslinterrors.com/a-leading-decimal-point-can-be-confused-with-a-dot-a">https://jslinterrors.com/a-leading-decimal-point-can-be-confused-with-a-dot-a</a></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-comment">/*jshint -W008 */</span>
+
+
+<span class="hljs-comment">/**
+ * Basic Monophonic Synthesizer
+ * !@constructor
+ * !@return {MonoSynth} The newly created MonoSynth
+ */</span>
+
+
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MonoSynth</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">/**
+     * name of the synth, useful for reporting/debugging
+     */</span>
+    <span class="hljs-keyword">this</span>.name = <span class="hljs-string">"MonoSynth"</span>;
+
+    <span class="hljs-comment">/**
+     * master amplitude for the synth
+     */</span>
+    <span class="hljs-keyword">this</span>.amplitude = <span class="hljs-number">0.5</span>;
+
+    <span class="hljs-comment">/**
+     * controls the envelope of the notes
+     * @type p5.Evn
+     */</span>
+    <span class="hljs-keyword">this</span>.envelope = <span class="hljs-keyword">new</span> p5.Env();
+    <span class="hljs-keyword">this</span>.envelope.setADSR(<span class="hljs-number">0.01</span>, <span class="hljs-number">0.05</span>, <span class="hljs-number">0.75</span>, <span class="hljs-number">0.25</span>);
+    <span class="hljs-keyword">this</span>.envelope.setRange(<span class="hljs-number">1.0</span>, <span class="hljs-number">0.0</span>);
+
+    <span class="hljs-comment">/**
+     * generates the tone of the notes
+     * @type p5.Oscillator
+     */</span>
+    <span class="hljs-keyword">this</span>.oscillator = <span class="hljs-keyword">new</span> p5.Oscillator(<span class="hljs-string">'square'</span>);
+    <span class="hljs-keyword">this</span>.oscillator.amp(<span class="hljs-keyword">this</span>.envelope); <span class="hljs-comment">// set amplitude</span>
+    <span class="hljs-keyword">this</span>.oscillator.start(); <span class="hljs-comment">// start oscillating</span>
+    <span class="hljs-keyword">this</span>.oscillator.freq(<span class="hljs-number">220</span>); <span class="hljs-comment">// set frequency</span>
+
+    <span class="hljs-comment">/**
+     * spacing shortens length of notes to make sure
+     * they are fully decayed before next note plays
+     * @type {Number}
+     */</span>
+    <span class="hljs-keyword">this</span>.spacing = <span class="hljs-number">0</span>; <span class="hljs-comment">// -0.7;</span>
+
+    <span class="hljs-comment">/**
+     * callback called when a note is played, receives
+     * @type {notePlayedCalback}
+     */</span>
+    <span class="hljs-keyword">this</span>.onNotePlayed = <span class="hljs-keyword">this</span>.reportNote;
+}
+
+
+
+<span class="hljs-comment">/**
+ * plays a note
+ * @param  {number} note - midi pitch value - middle C is 60
+ * @param  {number} length - length of note in seconds
+ * @param  {number} time - time in seconds from now to start note
+ */</span>
+MonoSynth.prototype.playNote = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">note, length, time</span>) </span>{
+    <span class="hljs-keyword">var</span> now = getAudioContext().currentTime;
+
+    <span class="hljs-keyword">if</span> (note === <span class="hljs-literal">undefined</span> || length === <span class="hljs-literal">undefined</span>) {
+        <span class="hljs-built_in">console</span>.error(<span class="hljs-string">"playNote requires note and length parameters"</span>);
+        <span class="hljs-keyword">return</span>;
+    }
+
+    time = time || <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">if</span> (note !== <span class="hljs-string">"rest"</span>) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p>schedule the pitch change</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+        <span class="hljs-keyword">var</span> frequency = midiToFreq(note);
+        <span class="hljs-keyword">this</span>.oscillator.oscillator.frequency.setValueAtTime(frequency, now +
+            time);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p>schedule the attack envelope</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>        <span class="hljs-keyword">var</span> sustainLength = length - <span class="hljs-keyword">this</span>.spacing;
+        <span class="hljs-keyword">this</span>.envelope.mult(<span class="hljs-keyword">this</span>.amplitude);
+        <span class="hljs-keyword">this</span>.envelope.play(<span class="hljs-keyword">this</span>.oscillator, time, sustainLength);
+    }
+
+    <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>;
+    setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        self.onNotePlayed(self, note, length, time);
+    }, time * <span class="hljs-number">1000</span>);
+};
+
+<span class="hljs-comment">/**
+ * plays a series of notes in sequence
+ * @param  {Array.Array} notes - An array of note descriptions [note, length]
+ */</span>
+MonoSynth.prototype.playNotes = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">notes</span>) </span>{
+    <span class="hljs-keyword">var</span> time = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; notes.length; i++) {
+        <span class="hljs-keyword">this</span>.playNote(notes[i][<span class="hljs-number">0</span>], notes[i][<span class="hljs-number">1</span>], time);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>increment schedule time</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>        time += notes[i][<span class="hljs-number">1</span>];
+    }
+};
+
+MonoSynth.prototype.reportNote = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">synth, note, length</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Note Played!"</span>, synth.name, note, quickMusic.midiToName(
+        note), length);
+};</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>
