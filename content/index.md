@@ -31,7 +31,7 @@
 | Week 8 | Visualizing Sound | Quartz Composer | [class notes](week_8)
 | Week 9 | Generating Music | TBD | [class notes](week_9)
 | | **Miscellanea** |
-| Week 10 | Generating Text | Javascript | [class notes](#)
+| Week 10 | Generating Text | Javascript | [class notes](week_10)
 | Week 11 | Generating 3D Forms | OpenSCAD | [class notes](#)
 | | **Final Project** |
 | Week 12 | Final Project Work Time, Special Topic Lecture
