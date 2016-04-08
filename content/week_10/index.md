@@ -29,6 +29,11 @@ It is written in Javascript, using the jQuery library.
 - [Life Expectancy Preview](death)
 - [Life Expectancy Source](death.zip)
 
+### Hey, What is jQuery?
+- [jQuery Homepage](http://www.jquery.com/)
+- [jQuery API Reference](http://api.jquery.com/)
+- [jQuery Learning Center](http://learn.jquery.com/)
+- [jQuery on Codecademy](https://www.codecademy.com/courses/web-beginner-en-bay3D/0/2?curriculum_id=50a3fad8c7a770b5fd0007a1)
 
 ## Final Proposal Assignment
 For your final project you will select an a topic covered in the class you are interested in and explore it further. Your final project should have more depth and complexity than the sketches you have been making. Beyond that, you are free to define the form your project will take, so long as I approve your plan.
