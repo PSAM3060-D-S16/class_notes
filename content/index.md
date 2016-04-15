@@ -32,17 +32,14 @@
 | Week 9 | Generating Music | TBD | [class notes](week_9)
 | | **Miscellanea** |
 | Week 10 | Generating Text | Javascript | [class notes](week_10)
-| Week 11 | Generating 3D Forms | OpenSCAD | [class notes](#)
+| Week 11 | Generating 3D Forms | OpenSCAD | [class notes](week_11)
 | | **Final Project** |
 | Week 12 | Final Project Work Time, Special Topic Lecture
 | Week 13 | Final Project Work Time, Special Topic Lecture
 | Week 14 | Final Project Work Time, Special Topic Lecture
-| Week 15 | Final Critique | 
+| Week 15 | Final Critique |
 
 
 
 
 <a href="sierpinski.js" class="p5_example show-titled-lab-link hidden">sierpinski.js</a>
-
-
-
