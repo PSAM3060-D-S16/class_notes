@@ -36,8 +36,8 @@ function MonoSynth() {
      */
     this.oscillator = new p5.Oscillator('square');
     this.oscillator.amp(this.envelope); // set amplitude
-    this.oscillator.start(); // start oscillating
     this.oscillator.freq(220); // set frequency
+    this.oscillator.start(); // start oscillating
 
     /**
      * spacing shortens length of notes to make sure
@@ -61,7 +61,7 @@ function MonoSynth() {
  * @param  {number} length - length of note in seconds
  * @param  {number} time - time in seconds from now to start note
  */
-MonoSynth.prototype.playNote = function(note, length, time) {
+MonoSynth.prototype.playNote = function (note, length, time) {
     var now = getAudioContext().currentTime;
 
     if (note === undefined || length === undefined) {
@@ -85,7 +85,7 @@ MonoSynth.prototype.playNote = function(note, length, time) {
     }
 
     var self = this;
-    setTimeout(function() {
+    setTimeout(function () {
         self.onNotePlayed(self, note, length, time);
     }, time * 1000);
 };
@@ -94,7 +94,7 @@ MonoSynth.prototype.playNote = function(note, length, time) {
  * plays a series of notes in sequence
  * @param  {Array.Array} notes - An array of note descriptions [note, length]
  */
-MonoSynth.prototype.playNotes = function(notes) {
+MonoSynth.prototype.playNotes = function (notes) {
     var time = 0;
     for (var i = 0; i < notes.length; i++) {
         this.playNote(notes[i][0], notes[i][1], time);
@@ -103,7 +103,7 @@ MonoSynth.prototype.playNotes = function(notes) {
     }
 };
 
-MonoSynth.prototype.reportNote = function(synth, note, length) {
+MonoSynth.prototype.reportNote = function (synth, note, length) {
     console.log("Note Played!", synth.name, note, quickMusic.midiToName(
         note), length);
 };

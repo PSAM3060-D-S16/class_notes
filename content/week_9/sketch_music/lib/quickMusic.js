@@ -36,7 +36,7 @@ quickMusic.scales.minorPentatonic = [0, 3, 5, 7, 10];
  * @param  {Array} scale - array that defines the scale
  * @return {Number} the resulting note number
  */
-quickMusic.getNoteInScale = function(position, tonic, scale) {
+quickMusic.getNoteInScale = function (position, tonic, scale) {
     if (position === "rest") {
         return "rest";
     }
@@ -56,7 +56,7 @@ quickMusic.getNoteInScale = function(position, tonic, scale) {
  * @param  {Number} number midi note value
  * @return {string} the name of the note
  */
-quickMusic.midiToName = function(number) {
+quickMusic.midiToName = function (number) {
     var name = quickMusic.noteNames[number % 12] + (Math.floor(number / 12) -
         1);
     return name || "-";
@@ -68,7 +68,7 @@ quickMusic.midiToName = function(number) {
  * @param  {Number} [octave=4] - number of the octave
  * @return {Number} midi number for the note
  */
-quickMusic.nameToMIDI = function(name, octave) {
+quickMusic.nameToMIDI = function (name, octave) {
     if (octave === undefined) {
         octave = 4;
     }
@@ -88,7 +88,7 @@ quickMusic.nameToMIDI = function(name, octave) {
  * @param  {[type]} scale  the scale of the key to impose to
  * @return {note-number phrase}        the imposed phrase
  */
-quickMusic.imposePhrase = function(phrase, tonic, scale) {
+quickMusic.imposePhrase = function (phrase, tonic, scale) {
     var copy = quickMusic.clonePhrase(phrase);
     for (var i = 0; i < copy.length; i++) {
         if (copy[i][0] !== "rest") {
@@ -105,7 +105,7 @@ quickMusic.imposePhrase = function(phrase, tonic, scale) {
  * @param  {Number} amount amount to shift
  * @return {phrase}        shifted copy
  */
-quickMusic.shiftPhrase = function(phrase, amount) {
+quickMusic.shiftPhrase = function (phrase, amount) {
     var copy = quickMusic.clonePhrase(phrase);
     for (var i = 0; i < copy.length; i++) {
         if (copy[i][0] !== "rest") {
@@ -120,7 +120,7 @@ quickMusic.shiftPhrase = function(phrase, amount) {
  * @param  {phrase} phrase
  * @return {phrase}
  */
-quickMusic.clonePhrase = function(phrase) {
+quickMusic.clonePhrase = function (phrase) {
     var clone = [];
     for (var i = 0; i < phrase.length; i++) {
         clone.push(phrase[i].slice(0));
